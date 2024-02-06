@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ค้นหาบอร์ดเกม</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>ค้นหาบอร์ดเกม</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="categories-container">
+            <h2>หมวดหมู่</h2>
+            <ul id="categoriesList">
+                <li onclick="filterByCategory('สยามบอร์ดเกม')"><a href="#">สยามบอร์ดเกม</a></li>
+                <li onclick="filterByCategory('Euro Games')"><a href="#">Euro Games</a></li>
+                <li onclick="filterByCategory('แบคเกมมายา')"><a href="#">แบคเกมมายา</a></li>
+                <!-- เพิ่มหมวดหมู่เพิ่มเติมตามต้องการ -->
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="boardGameName" placeholder="ชื่อบอร์ดเกม">
+                <button onclick="searchBoardGame()">เริ่มค้นหา</button>
+            </div>
+
+            <div class="board-games" id="boardGamesContainer">
+                <!-- รายการบอร์ดเกมที่ได้จากการค้นหา -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 BookForFun | ติดต่อ: nat26946@gmail.com
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
