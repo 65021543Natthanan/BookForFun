@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>หน้าหลัก</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="stlyless.css">
+    <link rel="stylesheet" href="styles.css"> <!-- สร้างไฟล์ styles.css เพื่อเพิ่มสไตล์แบบที่คุณต้องการ -->
 </head>
 <body>
 
     <!-- เพิ่มแบนเนอร์ด้านบน -->
     <div class="banner-container">
         <div class="banner-content">
-            <img src="logooooo.png" style="width:20%;" >
+            <img src="logooooo.png" alt="โลโก้" style="width:20%;">
         </div>
     </div>
 
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid">
-            
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                    <li class="nav-item ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">หน้าแรก</a>
                     </li>
                     <li class="nav-item">
@@ -40,77 +39,86 @@
 
     <div class="container">
         <div class="row">
-        
-         <!-- Container ทางซ้ายสุด -->
-         <div class="col-md-3">
-            
+            <div class="col-md-3">
+
+
                 <div class="left-container p-2">
                     <div id="resultContainer" class="mt-4 text-center">
-                        <div id="resultProfileImageContainer" style="display: none;">
-                            <img id="resultProfileImage" src="#" alt="รูปภาพโปรไฟล์" class="rounded-circle mx-auto " style="max-width: 50%; max-height: 150px; display: none;">
+                        
+                        <div id="resultProfileImageContainer">
+                            <img id="resultProfileImage" src="" alt="รูปภาพโปรไฟล์" class="rounded-circle mx-auto " width="100" height="100">
                         </div>
+                        
                         <p class="text-start" id="resultStoreName"><strong>ชื่อร้านค้า:</strong></p>
                         <p class="text-start" id="resultStorePhoneNumber"><strong>เบอร์โทรศัพท์ร้านค้า:</strong></p>
                         <p class="text-start" id="resultStoreEmail"><strong>อีเมลร้านค้า:</strong></p>
                         <p class="text-start" id="resultStoreDescription"><strong>รายละเอียดร้านค้า:</strong></p>
                     </div>
+                        
+
                 </div>
 
-                
-           
-        </div>
-
-        <div class="col-md-6">
-            <div class="center-container p-4">
-                <h1 class="text-start mb-4 fs-3">รายละเอียดร้านค้า</h1>
-                <p class="fs-6">ดูสถานะและแก้ไขรายละเอียดในร้านของคุณ</p>
-            <br>ข้อมูลทั่วไป<hr class="style1"><br>
-    
-            <form>
-               
-                <form id="storeForm">
-                    <div class="mb-3">
-                        <label for="storeName" class="form-label">ชื่อร้านค้า:</label>
-                        <input type="text" class="form-control" id="storeName" name="storeName" required>
-
-                    </div>
-        
-                    <div class="mb-3">
-                        <label for="storeDescription" class="form-label">รายละเอียดร้านค้า:</label>
-                        <textarea class="form-control" id="storeDescription" name="storeDescription" rows="4" required></textarea>
-                    </div>
-        
-                    <div class="mb-3">
-                        <label for="storePhoneNumber" class="form-label">เบอร์โทรศัพท์ร้านค้า:</label>
-                        <input type="tel" class="form-control" id="storePhoneNumber" name="storePhoneNumber" required>
-                    </div>
-        
-                    <div class="mb-3">
-                        <label for="storeEmail" class="form-label">อีเมลร้านค้า:</label>
-                        <input type="email" class="form-control" id="storeEmail" name="storeEmail" required>
-                    </div>
-                   
-                    <div class="mb-3">
-                        <label for="profileImage" class="form-label">อัปโหลดรูปภาพโปรไฟล์:</label>
-                        <input type="file" class="form-control" id="profileImage" name="profileImage" accept="image/*">
-                        <div id="previewContainer" class="mt-2">
-                            <img id="previewImage" src="#" alt="รูปภาพโปรไฟล์" style="max-width: 100%; max-height: 150px; display: none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="left-container p-2">
+                                
+                            </div>
+            
                         </div>
                     </div>
-                   
-                    <button type="button" onclick="saveProfileImage()" onclick="saveDataAndDisplay()" class="btn btn-warning">บันทึก</button>
+                        
+                </div>
 
-                </form>
 
             </div>
-        </div>
 
-        </div>
-      </div>
+            <div class="col-md-6">
+                <div class="center-container p-4">
+                    <h1 class="text-start mb-4 fs-3">รายละเอียดร้านค้า</h1>
+                    <p class="fs-6">ดูสถานะและแก้ไขรายละเอียดในร้านของคุณ</p>
+                    <br>ข้อมูลทั่วไป<hr class="style1"><br>
 
-           </div>
+                    <form id="storeForm">
+                        <div class="mb-3">
+                            <label for="storeName" class="form-label">ชื่อร้านค้า:</label>
+                            <input type="text" class="form-control" id="storeName" name="storeName" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="storeDescription" class="form-label">รายละเอียดร้านค้า:</label>
+                            <textarea class="form-control" id="storeDescription" name="storeDescription" rows="4" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="storePhoneNumber" class="form-label">เบอร์โทรศัพท์ร้านค้า:</label>
+                            <input type="tel" class="form-control" id="storePhoneNumber" name="storePhoneNumber" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="storeEmail" class="form-label">อีเมลร้านค้า:</label>
+                            <input type="email" class="form-control" id="storeEmail" name="storeEmail" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="profileImage" class="form-label">อัปโหลดรูปภาพโปรไฟล์:</label>
+                            <input type="file" class="form-control" id="profileImage" name="profileImage">
+
+                        </div>
+
+                        <button type="button" class="btn btn-warning" onclick="saveDataAndDisplay()">บันทึก</button>
+                        
+                    </form>
+                </div>
+            </div>
+            
+           
+        </div>
     </div>
-    <script src="script.js"></script>
+   
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script> <!-- สร้างไฟล์ script.js เพื่อเพิ่มสคริปต์ที่จำเป็น -->
 </body>
 </html>
