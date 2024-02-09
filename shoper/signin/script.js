@@ -1,25 +1,35 @@
 // script.js
 
-function validateForm(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+  var addressModal = new bootstrap.Modal(document.getElementById('addressModal'));
 
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
+  document.getElementById('addressForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      saveDataAndCloseModal();
+  });
 
-    // เพิ่มตรวจสอบความถูกต้องของข้อมูลที่ป้อน
-    if (!username || !email || !password || !confirmPassword) {
-        alert('กรุณากรอกข้อมูลให้ครบทุกช่อง');
-        return;
-    }
+  // Event listener สำหรับปิด Modal จากปุ่มปิด
+  var closeModalButtons = document.querySelectorAll('[data-bs-dismiss="modal"]');
+  closeModalButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+          addressModal.hide();
+      });
+  });
+});
 
-    if (password !== confirmPassword) {
-        alert('รหัสผ่านไม่ตรงกัน');
-        return;
-    }
+function saveDataAndCloseModal() {
+  var phoneNumber = document.getElementById('storePhoneNumber').value;
+  var password = document.getElementById('storePassword').value;
+  var confirmPassword = document.getElementById('confirmPassword').value;
+  var passwordMismatch = document.getElementById('passwordMismatch');
 
-    // ส่งข้อมูลไปยังเซิร์ฟเวอร์หรือจัดการตามความต้องการ
-    alert('การสมัครสมาชิกสำเร็จ!');
-    document.getElementById('registerForm').reset();
+  if (password === confirmPassword) {
+      alert('บันทึกข้อมูลเรียบร้อยแล้ว');
+      var addressModal = new bootstrap.Modal(document.getElementById('addressModal'));
+      addressModal.hide();
+      document.getElementById('addressForm').reset();
+      passwordMismatch.style.display = 'none';
+  } else {
+      passwordMismatch.style.display = 'block';
+  }
 }

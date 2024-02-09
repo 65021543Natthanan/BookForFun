@@ -15,12 +15,22 @@ function saveDataAndDisplay() {
         profileImageSrc: profileImageInput.files.length > 0 ? URL.createObjectURL(profileImageInput.files[0]) : null
     };
 
+    // แสดงข้อมูลที่บันทึกในคอนเทนเนอร์
+    saveImageToLocalStorage(data.profileImageSrc);
+
     // บันทึกข้อมูลใน localStorage
     localStorage.setItem('storedData', JSON.stringify(data));
+
 
     // แสดงข้อมูลที่บันทึกในคอนเทนเนอร์
     displayData(data);
 }
+
+function saveImageToLocalStorage(imageSrc) {
+    localStorage.setItem('uploadedImageSrc', imageSrc);
+}
+
+
 
 function displayData(data) {
     // แสดงข้อมูลที่บันทึกในคอนเทนเนอร์
@@ -44,7 +54,17 @@ function displayData(data) {
 // โหลดและแสดงข้อมูลจาก localStorage เมื่อโหลดหน้าเว็บ
 window.onload = function () {
     var storedData = JSON.parse(localStorage.getItem('storedData'));
+    var storedImageSrc = localStorage.getItem('uploadedImageSrc');
     if (storedData) {
         displayData(storedData);
     }
-};
+
+    if (storedImageSrc) {
+        // แสดงรูปภาพที่ถูกบันทึกใน Local Storage
+        document.getElementById('resultProfileImage').src = storedImageSrc;
+        document.getElementById('resultProfileImageContainer').style.display = 'block';
+    }
+}
+
+
+
