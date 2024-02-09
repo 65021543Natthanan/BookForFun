@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดร้านค้า</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- สร้างไฟล์ styles.css เพื่อเพิ่มสไตล์แบบที่คุณต้องการ -->
+    <style>
+        /* เพิ่มสไตล์เพื่อทำให้ Navbar คงที่ */
+        body {
+            padding-top: 0px; /* ปรับให้เนื้อหาไม่ถูกครอบโดย Navbar */
+        }
+
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1020; /* ให้มีความสูงเหนือตัวหลักของ Navbar */
+        }
+    
+    </style>
+    <style>
+        /* ตั้งค่าสไตล์ของ Footer */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: -150px; /* ขนาดขอบล่างของ Footer */
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .footer {
+            background-color: #333;
+            padding: 2px 0; /* ปรับขนาด Padding ของ Footer */
+            margin-top: auto;
+        }
+    </style>
+     <style>
+        /* Add your custom styles here if needed */
+        .booking-details p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+     
+</head>
+<body>
+
+    <!-- เพิ่มแบนเนอร์ด้านบน -->
+    <div class="banner-container">
+        <div class="banner-content">
+            <img src="logooooo.png" alt="โลโก้" style="width:20%;">
+        </div>
+    </div>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">หน้าแรก</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">คอมมิวนิตี</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">บอร์ดเกม</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ร้านค้า</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+
+                <div class="left-container p-2">
+                    <div id="resultContainer" class="mt-4 text-center">
+                        
+                        <div id="resultProfileImageContainer">
+                            <img id="resultProfileImage" src="" alt="รูปภาพโปรไฟล์" class="rounded-circle mx-auto " style width = 40% height= 40%>
+                        </div>
+                        
+                        <p class="text-start" id="resultStoreName"><strong>ชื่อร้านค้า:</strong></p>
+                        <p class="text-start" id="resultStorePhoneNumber"><strong>เบอร์โทรศัพท์ร้านค้า:</strong></p>
+                        <p class="text-start" id="resultStoreEmail"><strong>อีเมลร้านค้า:</strong></p>
+                        <p class="text-start" id="resultStoreDescription"><strong>รายละเอียดร้านค้า:</strong></p>
+                    </div>
+                        
+
+                </div>
+
+                <div class="container mt-5">
+                    <div class="accordion" id="mainAccordion">
+            
+                        <!-- ร้านค้า -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="storeHeading">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#storeCollapse" aria-expanded="true" aria-controls="storeCollapse">
+                                    ร้านค้า
+                                </button>
+                            </h2>
+                            <div id="storeCollapse" class="accordion-collapse collapse show" aria-labelledby="storeHeading" data-bs-parent="#mainAccordion">
+                                <div class="accordion-body">
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="profileHeading">
+                                            <a href="index.html" class="accordion-button collapsed" aria-expanded="false">
+                                                รายละเอียดร้านค้า
+                                            </a>
+                                        </h2>
+                                    </div>
+            
+                                    <!-- โปรไฟล์ร้านค้า -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="profileHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                โปรไฟล์ร้านค้า
+                                            </a>
+                                        </h2>
+                                    </div>
+            
+            
+                                    <!-- โปรโมชัน -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="promotionHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                โปรโมชัน
+                                            </a>
+                                        </h2>
+                                       
+                                    </div>
+            
+                                    <!-- ยืนยันการจอง -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="promotionHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                ยืนยันการจอง
+                                            </a>
+                                        </h2>
+                                        
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- บอร์ดเกม -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="gameBoardHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gameBoardCollapse" aria-expanded="false" aria-controls="gameBoardCollapse">
+                                    บอร์ดเกม
+                                </button>
+                            </h2>
+                            <div id="gameBoardCollapse" class="accordion-collapse collapse" aria-labelledby="gameBoardHeading" data-bs-parent="#mainAccordion">
+                                <div class="accordion-body">
+            
+                                    <!-- รายการบอร์ดเกม -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="promotionHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                รายการบอร์ดเกม
+                                            </a>
+                                        </h2>
+                                        
+                                    </div>
+            
+                                    <!-- คิวการจอง -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="promotionHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                คิวการจอง
+                                            </a>
+                                        </h2>
+                                        
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- ตั้งค่า -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="settingsHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settingsCollapse" aria-expanded="false" aria-controls="settingsCollapse">
+                                    ตั้งค่า
+                                </button>
+                            </h2>
+                            <div id="settingsCollapse" class="accordion-collapse collapse" aria-labelledby="settingsHeading" data-bs-parent="#mainAccordion">
+                                <div class="accordion-body">
+            
+                                    <!-- ที่อยู่ -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="promotionHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                ที่อยู่
+                                            </a>
+                                        </h2>
+                                        
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="promotionHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                บัญชีและรหัสผ่าน
+                                            </a>
+                                        </h2>
+                                        
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-6">
+                <div class="center-container p-4">
+                    <h1 class="text-start mb-1 fs-3">ยืนยันการจอง</h1>
+                    <p class="fs-6">กดยืนยันหรือปฏิเสธการจองเพื่อยืนยันหรือปฏิเสธการจองบอร์ดเกมของลูกค้า</p>
+                    <hr class="style1">
+
+                    <div class="container mt-5">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="text-center">ยืนยันการจองบอร์ดเกม</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="booking-details">
+                                    <!-- Content dynamically populated with JavaScript -->
+                                </div>
+                            </div>
+                            <div class="card-footer text-end">
+                                <button type="button" class="btn btn-success" onclick="confirmBooking()">ยืนยันการจอง</button>
+                                <button type="button" class="btn btn-danger" onclick="rejectBooking()">ปฏิเสธการจอง</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+    </div>
+   
+    
+
+    <div class="footer">
+        <div class="container text-center text-light">
+            <p>© 2024 BookForFun. All Rights Reserved.</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script> <!-- สร้างไฟล์ script.js เพื่อเพิ่มสคริปต์ที่จำเป็น -->
+</body>
+</html>
