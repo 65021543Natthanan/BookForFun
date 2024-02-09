@@ -46,7 +46,7 @@
                     <div id="resultContainer" class="mt-4 text-center">
                         
                         <div id="resultProfileImageContainer">
-                            <img id="resultProfileImage" src="" alt="รูปภาพโปรไฟล์" class="rounded-circle mx-auto " width="100" height="100">
+                            <img id="resultProfileImage" src="" alt="รูปภาพโปรไฟล์" class="rounded-circle mx-auto " style width = 40% height= 40%>
                         </div>
                         
                         <p class="text-start" id="resultStoreName"><strong>ชื่อร้านค้า:</strong></p>
@@ -58,16 +58,120 @@
 
                 </div>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="left-container p-2">
-                                
-                            </div>
+                <div class="container mt-5">
+                    <div class="accordion" id="mainAccordion">
             
+                        <!-- ร้านค้า -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="storeHeading">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#storeCollapse" aria-expanded="true" aria-controls="storeCollapse">
+                                    ร้านค้า
+                                </button>
+                            </h2>
+                            <div id="storeCollapse" class="accordion-collapse collapse show" aria-labelledby="storeHeading" data-bs-parent="#mainAccordion">
+                                <div class="accordion-body">
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="profileHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                รายละเอียดร้านค้า
+                                            </a>
+                                        </h2>
+                                    </div>
+            
+                                    <!-- โปรไฟล์ร้านค้า -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="profileHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                โปรไฟล์ร้านค้า
+                                            </a>
+                                        </h2>
+                                    </div>
+            
+            
+                                    <!-- โปรโมชัน -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="promotionHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                โปรโมชัน
+                                            </a>
+                                        </h2>
+                                       
+                                    </div>
+            
+                                    <!-- ยืนยันการจอง -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="promotionHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                ยืนยันการจอง
+                                            </a>
+                                        </h2>
+                                        
+                                    </div>
+            
+                                </div>
+                            </div>
                         </div>
+            
+                        <!-- บอร์ดเกม -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="gameBoardHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gameBoardCollapse" aria-expanded="false" aria-controls="gameBoardCollapse">
+                                    บอร์ดเกม
+                                </button>
+                            </h2>
+                            <div id="gameBoardCollapse" class="accordion-collapse collapse" aria-labelledby="gameBoardHeading" data-bs-parent="#mainAccordion">
+                                <div class="accordion-body">
+            
+                                    <!-- รายการบอร์ดเกม -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="promotionHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                รายการบอร์ดเกม
+                                            </a>
+                                        </h2>
+                                        
+                                    </div>
+            
+                                    <!-- คิวการจอง -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="promotionHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                คิวการจอง
+                                            </a>
+                                        </h2>
+                                        
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- ตั้งค่า -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="settingsHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settingsCollapse" aria-expanded="false" aria-controls="settingsCollapse">
+                                    ตั้งค่า
+                                </button>
+                            </h2>
+                            <div id="settingsCollapse" class="accordion-collapse collapse" aria-labelledby="settingsHeading" data-bs-parent="#mainAccordion">
+                                <div class="accordion-body">
+            
+                                    <!-- ที่อยู่ -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="promotionHeading">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                                ที่อยู่
+                                            </a>
+                                        </h2>
+                                        
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+            
                     </div>
-                        
                 </div>
 
 
