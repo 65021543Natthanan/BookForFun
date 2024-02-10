@@ -226,50 +226,50 @@
 
             <div class="col-md-6">
                 <div class="center-container p-4">
+                    <h1 class="text-start mb-1 fs-3">โปรไฟล์ร้านค้า</h1>
+                    <p class="fs-6">แก้ไขโปรไฟล์ร้านค้าและเพิ่มบอร์ดเกม</p>
+                    <hr class="style1">
+
                     <div class="container mt-5">
                         <div class="row">
+                            
                             <!-- คอนเทนเนอร์แรก -->
-                            <div class="col-md-4">
+                            <div class="col-md-2">
+                                
+                                
                                 <div class="card">
-                                    <img src="profile-image.jpg" class="card-img-top" alt="ภาพโปรไฟล์">
+                                    <img src="resultProfileImage" class="rounde mx-auto " alt="ภาพโปรไฟล์">
+                                    
+
                                     <div class="card-body">
-                                        <h5 class="card-title">ชื่อร้านค้า</h5>
-                                        <p class="card-text">ที่อยู่ของร้านค้า</p>
+                                        
                                     </div>
                                 </div>
                             </div>
                     
                             <!-- คอนเทนเนอร์ที่สอง -->
-                            <div class="col-md-8">
+                            <div class="col-md-3">
                                 <div class="card">
                                     <div class="card-header">
                                         รายละเอียดร้านค้า
                                     </div>
                                     <div class="card-body">
                                         <!-- เนื้อหารายละเอียดร้านค้า -->
-                                        <p>ข้อมูลรายละเอียดร้านค้าที่นี่...</p>
+                                        <p></p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    
-                        <!-- คอนเทนเนอร์ที่สาม -->
-                        <div class="row mt-4">
-                            <div class="col-md-12">
+                            <div class="col-md-3">
                                 <div class="card">
                                     <div class="card-header">
-                                        จำนวนบอร์ดเกมที่ร้านค้ามี
+                                        จำนวนบอร์ดเกม
                                     </div>
                                     <div class="card-body">
-                                        <p>จำนวนบอร์ดเกมที่ร้านค้ามี: 50</p>
+                                        <p align="center"><span id="totalBoardsCount">0</span></p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    
-                        <!-- คอนเทนเนอร์ที่สี่ -->
-                        <div class="row mt-4">
-                            <div class="col-md-12">
+                            <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-header">
                                         คะแนนรีวิวจากลูกค้า
@@ -279,30 +279,32 @@
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
-                    
+
                         <!-- คอนเทนเนอร์ที่ห้า -->
-                        <div class="row mt-4">
-                            <div class="col-md-12">
+                        <div class="col mt-2">
+                            <div class="col-md-15">
                                 <div class="card">
                                     <div class="card-header">
                                         บอร์ดเกมที่ร้านค้ามี
                                     </div>
                                     <div class="card-body">
-                                        <!-- รายการบอร์ดเกมที่นี่ -->
-                                        <ul>
-                                            <li>บอร์ดเกมที่ 1</li>
-                                            <li>บอร์ดเกมที่ 2</li>
-                                            <!-- เพิ่มรายการตามความต้องการ -->
-                                        </ul>
-                                        <!-- ปุ่มสำหรับเพิ่มบอร์ดเกม -->
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBoardModal">
+                                       
+                                        <div align="right">
+                                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addBoardModal">
                                             เพิ่มบอร์ดเกม
                                         </button>
+                                        </div>
+                                        <!-- ปุ่มสำหรับเพิ่มบอร์ดเกม -->
+                                        <div class="col mt-4" id="boardsContainer">
+                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                       
                     </div>
                     
                     <!-- Modal สำหรับเพิ่มบอร์ดเกม -->
@@ -315,21 +317,35 @@
                                 </div>
                                 <div class="modal-body">
                                     <!-- แบบฟอร์มสำหรับกรอกรายละเอียดบอร์ดเกม -->
-                                    <form>
+                                    <form id="addBoardForm">
                                         <div class="mb-3">
                                             <label for="boardName" class="form-label">ชื่อบอร์ดเกม</label>
                                             <input type="text" class="form-control" id="boardName">
                                         </div>
-                                        <!-- เพิ่มฟิลด์อื่น ๆ ตามความต้องการ -->
+                                        <div class="mb-3">
+                                            <label for="boardName" class="form-label">กติกาเบื้องต้น</label>
+                                            <input type="text" class="form-control" id="boardRule">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="boardName" class="form-label">จำนวนผู้เล่น</label>
+                                            <input type="text" class="form-control" id="boardPlayer">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="profileImage" class="form-label">อัปโหลดรูปภาพบอร์ดเกม:</label>
+                                            <input type="file" class="form-control" id="boardImage" name="boardImage">
+                                        </div>
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
-                                    <button type="button" class="btn btn-primary">บันทึก</button>
+                                    <button type="button" class="btn btn-primary" onclick="saveBoard()">บันทึก</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    
+                    
                 </div>
             </div>
             

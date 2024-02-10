@@ -17,6 +17,7 @@
 body {
     background-color: #fffef0;
     font-family: 'Arial', sans-serif;
+    
 }
 
 .left-container{
@@ -31,7 +32,8 @@ body {
 .center-container {
     background-color: #f8f9fa;
     border: 1px solid #d6d8db;
-    padding: 20px;
+    padding: 200px;
+    margin: 1px;
 }
 
 
@@ -46,23 +48,46 @@ body {
 
 /* ปรับแต่งสไตล์ของหน้าโปรไฟล์ร้านบอร์ดเกม */
 .container {
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 .card {
-    margin-bottom: 20px;
+    background-color: #ffffff; /* สีพื้นหลังของการ์ด */
+    border: 1px solid #DDD; /* เส้นขอบของการ์ด */
+    border-radius: 8px; /* มุมของการ์ด */
+    margin-bottom: 10px; /* ระยะห่างระหว่างการ์ด */
 }
 
-.btn-primary {
-    background-color: #007bff;
+.card-header{
+    background-color: #ffc107; /* สีพื้นหลังของการ์ด */
+    border: 1px solid #ffc107;
 }
 
-/* ปรับแต่งสไตล์ของ Modal */
-.modal-content {
-    border-radius: 0;
+.btn-warning, .btn-danger {
+    color: #333; /* สีข้อความของปุ่ม */
 }
 
-.modal-header {
-    background-color: #007bff;
-    color: #fff;
+.btn-warning {
+    background-color: #FFD700; /* สีพื้นหลังของปุ่มแก้ไข */
+}
+
+.btn-danger {
+    background-color: #FF6347; /* สีพื้นหลังของปุ่มลบ */
+}
+
+.btn-warning:hover, .btn-danger:hover {
+    background-color: #FFC125; /* สีพื้นหลังเมื่อนำเมาส์ไปวางบนปุ่ม */
+}
+
+
+.card-title, .form-label {
+    user-select: none; /* ป้องกันการเลือกข้อความ */
+}
+
+.modal-close, .modal-dismiss {
+    color: #333; /* สีข้อความของปุ่มปิดและปุ่มกากบาท */
+}
+
+.modal-close:hover, .modal-dismiss:hover {
+    color: #FF6347; /* สีข้อความเมื่อนำเมาส์ไปวางบนปุ่มปิดและปุ่มกากบาท */
 }
