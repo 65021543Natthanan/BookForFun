@@ -66,11 +66,15 @@ window.onload = function () {
     }
 }
 
+
+
+
+
 // โค้ดที่ใช้เก็บข้อมูลบอร์ดเกมใน Local Storage
 var boardsData = JSON.parse(localStorage.getItem('boardsData')) || [];
 
 // ฟังก์ชันที่ใช้เพิ่มข้อมูลบอร์ดเกม
-function saveBoard() {
+function saveBoard() { 
     // ดึงข้อมูลจากฟอร์ม
     var boardName = document.getElementById("boardName").value;
     
