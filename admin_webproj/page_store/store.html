@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookForFun</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="store.css">
+   
+    <style>
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            background: url('../image/logoAdmin.png') center/cover;
+            filter: blur(2px);
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            margin: 5rem auto;
+            padding: 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            background-color: #ffc107;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+    <div>
+        <img src="../image/logo.png" style="width: 19%;" align="left">
+        <div align="right">
+            <a href="#" class="button">สมัครสมาชิก</a>
+            <a href="#" class="button">เข้าสู่ระบบ</a>
+        </div>
+    </div>
+    </header>
+    
+    <nav>
+        <a href="#">หน้าแรก</a>
+        <a href="#">คอมมูนิตี้</a>
+        <a href="boardgame\search.html"  target="_blank">บอร์ดเกม</a>
+        <a href="#">ร้านค้า</a>
+    </nav>
+
+    <div class="container">
+        <h1>--For ADMIN--</h1>
+    </div>
+
+   <aside>
+    <div>
+        <ul class="p-0">
+            <h3 class="bg-white">Menu</h3>
+            <li><a href="../page_dash/admin.html">Dash Board</a></li>
+            <li><a href="../page_user/admin2.html">User Management</a></li>
+            <li><a href="../page_store/store.html"></a>Store Management</li>
+            <li><a href="../page_book/book.html"></a>Booking Management</li>
+            <li><a href="../page_report/report.html"></a>Report</li>
+            <li><a href="../page_board/board.html"></a>Board Game</li>
+            <li><a href="../page_promotion/promotion.html"></a>Promotion</li>
+        </ul>
+    </div>
+   </aside>
+
+   <main>
+    <div>
+        <h1>Dash Board</h1> <br>
+        <div align="left">
+            <h5>สถิติการเข้าใช้งานเว็บไซต์</h5>
+            <div><h5>จำนวนการจองล่าสุด</h5>
+                <div><h5>ยอดขาย</h5>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+   </main>
+
+   <footer>
+    <div>
+        <p>&copy; 2024 BookForFun</p>
+    </div>
+   </footer>
+   
+   <!-- from -->
+   <!-- <div class="container mt-5">
+    
+    <form action="" method="post">
+
+        <div class="mb-3">
+            <label for="text-input">Text Input:</label>
+        <input type="text" id="text-input" name="text-input" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password-input">Password:</label>
+            <input type="password" id="password-input" name="password-input" required>
+        </div>
+    
+        <div class="mb-3">
+            <label for="textarea">Textarea:</label>
+            <textarea name="textarea" id="textarea" cols="50" rows="4" required></textarea>
+        </div>
+    
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Mael</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+    
+        <br>
+    
+        <input type="checkbox" id="subscribe" name="subscribe" value="subscribe">
+        <label for="subscribe">subscribe to newsletter</label>
+    
+        <br>
+    
+        <label for="file">Choose a file:</label>
+        <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png" required>
+    
+        <br>
+    
+        <input type="submit" value="Submit">
+    
+    </form> 
+</div> -->
+   
+</body>
+</html>
