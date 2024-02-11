@@ -1,38 +1,42 @@
 /* Font */
 
-body {
+.body {
     font-family: 'Poppins', sans-serif;
-    background-color:#ddd;
+    background-color:#fffef0;
+    padding-top: 0px;
   }
   
   /* Color */
   
-  header {
-    background-color:#FFC107;
-    color: #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 65px; /* กำหนดความสูงเท่ากัน */
-    padding: 40px 20px;
+  .banner-container {
+    background-color: #ffc107;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .banner-content img {
+    max-width: 100%;
+  }
+  .banner-content form {
+    text-align: right;
   }
 
-    header form {
-        margin-left: auto;
-    }
-
-    header input[type="text"],header button {
-        height: 50px; /* กำหนดความสูงเท่ากัน */
-    }
-
-    button {
-        cursor: pointer;
-        width: auto; /* เปลี่ยนเป็นค่าคงที่ */
-        background-color: #333;
-        color: #fff;
-        padding: 8px 16px; /* เพิ่ม padding เพื่อให้ปุ่มมีขนาดที่เหมาะสม */
-    }
-
+.navbar { 
+    background-color: #333;
+    text-align: center;
+}
+.left-container{
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc; /* เพิ่มเส้นขอบทั้งหมด */
+    border-radius: 10px; /* เพิ่มขอบมนขอบ */
+}
+.center-container {
+    background-color: #f8f9fa;
+    border: 1px solid #d6d8db;
+    padding: 20px;
+}
 
   .Click{
     border: 2px;
@@ -93,3 +97,30 @@ body {
     object-fit: cover;
 }
 
+.pagination {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.pagination a:hover {
+    background-color:#F4C11E;
+}
+  
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบนเพื่อให้ปุ่ม pagination ไม่ติดกับรายการผลลัพธ์ */
+}
+
+.pagination a {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    color: #333;
+}
+.style1 {
+    border-top: 1px solid #000;
+}

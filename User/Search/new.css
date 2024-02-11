@@ -1,43 +1,47 @@
-*{
-  padding: 0%;
+/* Font */
+
+.body {
+  font-family: 'Poppins', sans-serif;
+  background-color:#fffef0;
+  padding-top: 0px;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #ddd;
+/* Color */
+
+.banner-container {
+  background-color: #ffc107;
+  padding: 20px;
+  text-align: left;
 }
 
-header {
-  background-color:#FFC107;
-  color: #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 65px; /* กำหนดความสูงเท่ากัน */
-  padding: 40px 20px;
-  margin: 0px 10px 0px 10px;
+.banner-content img {
+  max-width: 100%;
+}
+.banner-content form {
+  text-align: right;
 }
 
-.nav-bar {
-  float: right;
+.navbar { 
+  background-color: #333;
+  text-align: center;
 }
-
-.nav-bar a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: #bf4141;
+.left-container{
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc; /* เพิ่มเส้นขอบทั้งหมด */
+  border-radius: 10px; /* เพิ่มขอบมนขอบ */
 }
-
-.nav-bar a:hover {
-  color: #ccc;
+.center-container {
+  background-color: #f8f9fa;
+  border: 1px solid #d6d8db;
+  padding: 20px;
 }
 
 .Click{
   border: 2px;
   width: auto;
   height: 80px;
-  width: 100%;
   background-color: #333;
   color: #FFC107;
 }
@@ -51,106 +55,72 @@ header {
 }
 
 
-main {
-  padding: 20px;
+.results {
+  position: absolute;
+  top: 34%; /* ปรับตำแหน่งตามต้องการ */
+  right: 20%; /* ปรับตำแหน่งตามต้องการ */
+  width: 65%;
 }
 
-.game-info {
+.MeetStore{
+  padding-left:5% ;
+}
+
+.results .store-name{
+  margin: 0% 0% 8% 3%;
+}
+
+.store {
+  background-color:#f8f8f8;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
   border: 1px solid #ddd;
-  padding: 20px;
+  border-radius: 4px;
 }
 
-.search-bar {
-  margin-bottom: 20px;
+.store-name {
+  margin-right: 10px;
 }
 
-.search-bar input {
-  padding: 10px;
-  width: 200px;
-  border: 1px solid #ddd;
+.store-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-.search-bar button {
-  padding: 10px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.game-card {
-  border: 2px;
-  width: 80%px;
-  height: 100px;
-  margin-bottom: 20px;
-}
-
-.game-card img {
-  width: 100px;
-  float: left;
-  margin-right: 20px;
-}
-
-.game-card h3 {
-  margin-top: 0px 0px 0px 2px;
-}
-
-.game-card p {
-  margin-bottom: 0;
-}
-
-.booking-form {
-  margin-top: 20px;
-}
-
-.booking-form input {
-  padding: 10px;
-  width: 200px;
-  border: 1px solid #ddd;
-}
-
-.booking-form button {
-  padding: 10px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
+.store-image img {
   width: 100%;
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* เพิ่มเติม */
-
-.game-card {
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #ccc;
+.pagination {
+  margin-top: 50px;
+  text-align: center;
 }
 
-.game-card h3 {
-  font-size: 18px;
+.pagination a:hover {
+  background-color:#F4C11E;
 }
 
-.game-card p {
-  font-size: 14px;
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* เพิ่มระยะห่างด้านบนเพื่อให้ปุ่ม pagination ไม่ติดกับรายการผลลัพธ์ */
 }
 
-.booking-form h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+.pagination a {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  color: #333;
 }
-
-.booking-form input {
-  margin-bottom: 10px;
-}
-
-.booking-form button {
-  width: 100px;
+.style1 {
+  border-top: 1px solid #000;
 }
