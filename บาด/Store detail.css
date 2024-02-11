@@ -3,17 +3,19 @@
     background-color: #ffc107;
     padding: 20px;
     text-align: left;
-}
-
-.banner-content img {
+  }
+  
+  .banner-content img {
     max-width: 100%;
-}
+  }
+  .banner-content form {
+    text-align: right;
+  }
 
 .navbar { 
     background-color: #333;
-    text-align: center;
+    text-align : center;
 }
-
 body {
     background-color: #fffef0;
     font-family: 'Arial', sans-serif;
