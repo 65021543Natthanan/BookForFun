@@ -99,7 +99,7 @@ function editBoard(boardName) {
                             </div>
                             <div class="mb-3">
                                 <label for="editBoardRules" class="form-label">Basic Rules</label>
-                                <textarea type="text" class="form-control" id="editBoardRules" rows="3" required>${board.rules}</textarea>
+                                <textarea type="text" class="form-control" id="editBoardRules" required>${board.rules}</textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="editPlayersCount" class="form-label">Number of Players</label>

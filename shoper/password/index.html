@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Edit User</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Edit User</h2>
+    <form id="editUserForm">
+        <div class="mb-3">
+            <label for="editEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="editEmail" required>
+        </div>
+        <div class="mb-3">
+            <label for="editPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="editPassword" required>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="saveUserData()">Save</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12HbL5Znu+L4Uq8ve7go5lK7uPVp0P5F8BtonwBqIpi" crossorigin="anonymous"></script>
+<script>
+    // Assuming you have a user object with initial data
+    var currentUser = {
+        email: "user@example.com",
+        password: "initialPassword"
+    };
+
+    // Set initial values in the form
+    document.getElementById('editEmail').value = currentUser.email;
+    document.getElementById('editPassword').value = currentUser.password;
+
+    // Function to save user data
+    function saveUserData() {
+        // Get data from the form
+        var editedEmail = document.getElementById('editEmail').value;
+        var editedPassword = document.getElementById('editPassword').value;
+
+        // Update user object
+        currentUser.email = editedEmail;
+        currentUser.password = editedPassword;
+
+        // Here you can send the updated user data to the server or update it in your database
+        // For this example, we'll just log the updated data
+        console.log("Updated User Data:", currentUser);
+
+        // Optionally, you can display a success message to the user
+        alert("User data updated successfully!");
+    }
+</script>
+
+</body>
+</html>
