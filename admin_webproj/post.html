@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดร้านค้า</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="post.css"> <!-- สร้างไฟล์ styles.css เพื่อเพิ่มสไตล์แบบที่คุณต้องการ -->
+    <style>
+        /* เพิ่มสไตล์เพื่อทำให้ Navbar คงที่ */
+        body {
+            padding-top: 0px; /* ปรับให้เนื้อหาไม่ถูกครอบโดย Navbar */
+        }
+
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1020; /* ให้มีความสูงเหนือตัวหลักของ Navbar */
+        }
+    
+    </style>
+    <style>
+        /* ตั้งค่าสไตล์ของ Footer */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: -150px; /* ขนาดขอบล่างของ Footer */
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .footer {
+            background-color: #333;
+            padding: 2px 0; /* ปรับขนาด Padding ของ Footer */
+            margin-top: auto;
+        }
+    </style>
+     
+</head>
+<body>
+
+    <!-- เพิ่มแบนเนอร์ด้านบน -->
+    <div class="banner-container">
+        <div class="banner-content">
+            <img src="../image/logo-10.png" alt="โลโก้" style="width:20%;">
+        </div>
+    </div>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">หน้าแรก</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">คอมมิวนิตี</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">บอร์ดเกม</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ร้านค้า</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+            <div class="col-md-6">
+                <div class="center-container p-4">
+                    <h2 class="text-center mb-4">Update Promotions</h2>
+
+        <!-- Form for updating promotions -->
+        <form id="updatePromotionForm">
+            <div class="form-group">
+                <label for="storeName">ชื่อโปรโมชัน</label>
+                <input type="text" class="form-control" id="storeName" required>
+            </div>
+            <div class="form-group">
+                <label for="promotionDescription">เนื้อหาโปรโมชัน</label>
+                <textarea class="form-control" id="promotionDescription" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="promotionImage" class="form-label">ภาพโปรโมชัน</label>
+                <input type="file" class="form-control" id="promotionImage" accept="image/*">
+            </div>
+
+            
+
+
+            <button type="button" class="btn btn-primary" onclick="updatePromotion()">Update Promotion</button>
+        </form>
+        <!-- Display updated promotions -->
+        <div id="updatedPromotionContainer" class="mt-4">
+            <!-- Updated promotions will be displayed here -->
+        </div>
+
+                </div>
+            </div>
+            
+           
+        </div>
+    </div>
+   
+    
+
+    <div class="footer">
+        <div class="container text-center text-light">
+            <p>© 2024 BookForFun. All Rights Reserved.</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="a.js"></script> <!-- สร้างไฟล์ script.js เพื่อเพิ่มสคริปต์ที่จำเป็น -->
+</body>
+</html>

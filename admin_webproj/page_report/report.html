@@ -54,6 +54,27 @@
             background-color: #333;
             color: #fff;
         }
+
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        text-align: center;
+        width: 40%;
+        padding: 50px;
+        margin: 20px;
+        }
+
+        .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container {
+        padding: 2px 16px;
+        }
+
+        .cardd {
+            text-align: left;
+        }
     </style>
 
 </head>
@@ -71,7 +92,6 @@
     
     <nav>
         <a href="#">หน้าแรก</a>
-        <a href="#">คอมมูนิตี้</a>
         <a href="boardgame\search.html"  target="_blank">บอร์ดเกม</a>
         <a href="#">ร้านค้า</a>
     </nav>
@@ -86,11 +106,11 @@
             <h3 class="bg-white">Menu</h3>
             <li><a href="../page_dash/admin.html">Dash Board</a></li>
             <li><a href="../page_user/admin2.html">User Management</a></li>
-            <li><a href="../page_store/store.html"></a>Store Management</li>
-            <li><a href="../page_book/book.html"></a>Booking Management</li>
-            <li><a href="../page_report/report.html"></a>Report</li>
-            <li><a href="../page_board/board.html"></a>Board Game</li>
-            <li><a href="../page_promotion/promotion.html"></a>Promotion</li>
+            <li><a href="../page_store/store.html">Store Management</a></li>
+            <li><a href="../page_book/book.html">Booking Management</a></li>
+            <li><a href="../page_report/report.html">Report</a></li>
+            <li><a href="../page_board/board.html">Board Game</a></li>
+            <li><a href="../page_promotion/promotion.html">Promotion</a></li>
         </ul>
     </div>
    </aside>
@@ -98,14 +118,42 @@
    <main>
     <div>
         <h1>Report</h1> <br>
-        <div align="left">
-            <h5>ข้อมูลเชิงลึกเกี่ยวกับการจองและยอดขาย</h5>
-            <div><h5>รายงานการจองล่าสุด</h5>
-                <div><h5>กราฟแสดงแนวโน้มยอดขาย</h5>
+        <div>
+            <div class="card">
+                <!-- <img src="../image/ellipse-20.png" alt="Avatar" style="width:20%"> -->
+                <div>
+                  <b><h5>รายงานการจอง</h5></b>
+                </div>
+                <div class="cardd">
+                <div><h5>บอร์ดเกม:</h5>
+                    <a href=""></a>
+                </div>
+                <div>
+                    <h5>จากร้าน:</h5>
+                    <div>
+                        <h5>เบอร์ติดต่อร้าน:</h5>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- <img src="../image/ellipse-20.png" alt="Avatar" style="width:20%"> -->
+                <div>
+                    <b><h5>รายงานผู้ใช้</h5></b>
+                  </div>
+                <div class="cardd">
+                  <h5>พฤติกรรม:</h5>
+                <div><h5>ผู้แจ้ง:</h5></div>
+                <div>
+                    <h5>เบอร์ติดต่อผู้แจ้ง:</h5>
+                </div>
+                <div>
+                    <h5>เบอร์ติดต่อผู้ใช้:</h5>
+                </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
    </main>
 

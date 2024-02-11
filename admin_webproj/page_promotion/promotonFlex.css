@@ -1,0 +1,32 @@
+.pro-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.pro-wrapper > *{
+    flex: 1 100%;
+}
+
+@media all and (min-width:500px){
+    .main{
+        flex: 3;
+    }
+    .pro-side-menu{
+        order: 1;
+    }
+    .pro-main{
+        order: 2;
+    }
+    .pro-side-menu2{
+        order: 2;
+    }
+    .footer{
+        order: 4;
+    }
+}
+
+@media all and (min-width:300px){
+    .side{
+        flex: 1;
+    }
+}
