@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="wait a minute.css">
+    <title>ประวัติการจอง</title>
+    <style>
+        /* CSS styling for history table */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+        <!-- เพิ่มแบนเนอร์ด้านบน -->
+        <div class="banner-container">
+            <div class="banner-content">
+                <img src="logooooo.png" alt="โลโก้" style="width:20%;">
+            </div>
+        </div>
+        <div id="promotions-list"></div>
+        <script src="script.js"></script>
+    
+    
+    
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top  sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">หน้าแรก</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">บอร์ดเกม</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ร้านค้า</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    <h1>ประวัติการจอง</h1>
+    <table id="booking-history-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Table</th>
+                <th>Number</th>
+                <th>Action</th> <!-- บรรทัดนี้เพิ่มไป -->
+            </tr>
+        </thead>
+        <tbody id="booking-history-body">
+            <!-- แถวข้อมูลจะถูกแสดงที่นี่ -->
+        </tbody>
+    </table>
+    <script>
+        // Sample booking history data (you would fetch this from a database or API)
+        const bookingHistoryData = [
+            { Date: '2024-02-11', Time: '10.00', Name: 'เฟิสซี่', Phonenumber: '080-xxxxxxx', Table: '1', Number: '5'},
+            { Date: '2024-02-11', Time: '10.30', Name: 'นัทตี้', Phonenumber: '080-xxxxxxx', Table: '2', Number: '10'},
+            // Add more booking history data as needed
+        ];
+
+        // Function to populate the booking history table
+        function populateBookingHistoryTable() {
+            const tableBody = document.getElementById('booking-history-body');
+
+            bookingHistoryData.forEach(booking => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${booking.Date}</td>
+                    <td>${booking.Time}</td>
+                    <td>${booking.Name}</td>
+                    <td>${booking.Phonenumber}</td>
+                    <td>${booking.Table}</td>
+                    <td>${booking.Number}</td>
+                    
+    
+                    <button onclick="deleteRow(1)">Delete</button></td>
+                `;
+                tableBody.appendChild(row);
+                
+            });
+        }
+        
+        document.querySelectorAll('.delete-button')
+        // Call the function to populate the table when the page loads
+        window.addEventListener('DOMContentLoaded', populateBookingHistoryTable);
+        
+        function deleteRow(id) {
+    if (confirm("Are you sure you want to delete this data?")) {
+        // Get the table element
+        var table = document.getElementById("data-table");
+        
+        // Find the row with the specified ID and remove it
+        for (var i = 0; i < table.rows.length; i++) {
+            if (table.rows[i].cells[0].innerHTML == id) {
+                table.deleteRow(i);
+                break;
+            }
+        }
+
+
+
+
+        // Reload or update page here
+        location.reload(); // This will reload the page after deletion
+    }
+}
+
+
+        
+    </script>
+    <div class="footer">
+        <div class="container text-center text-light">
+            <p>© 2024 BookForFun. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="wait a minute.js"> </script> <!-- สร้างไฟล์ script.js เพื่อเพิ่มสคริปต์ที่จำเป็น -->
+</body>
+</html>
