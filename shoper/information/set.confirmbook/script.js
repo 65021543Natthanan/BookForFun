@@ -5,10 +5,8 @@ var bookingData = {
     email: "john@example.com",
     gameBoard: "Monopoly",
     dateTime: "2024-02-15 15:00-16:00", // Format: YYYY-MM-DD HH:mm
-
 };
 
-// Function to populate the content dynamically
 function populateBookingContent() {
     var container = document.querySelector(".booking-details");
 
@@ -23,26 +21,20 @@ function populateBookingContent() {
     container.innerHTML = content;
 }
 
-// Function to handle booking confirmation
 function confirmBooking() {
     // Add your logic to handle booking confirmation
     alert("ยืนยันการจองเรียบร้อยแล้ว");
-    // You may want to redirect or perform additional actions here
 
-    // Hide the modal
-    var modal = new bootstrap.Modal(document.querySelector(".modal"));
-    modal.hide();
+    // Hide the container
+    document.querySelector(".booking-details").style.display = "none";
 }
 
-// Function to handle booking rejection
 function rejectBooking() {
     // Add your logic to handle booking rejection
     alert("ปฏิเสธการจอง");
-    // You may want to redirect or perform additional actions here
 
-    // Hide the modal
-    var modal = new bootstrap.Modal(document.querySelector(".modal"));
-    modal.hide();
+    // Hide the container
+    document.querySelector(".booking-details").style.display = "none";
 }
 
 // Populate content when the page loads

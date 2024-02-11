@@ -1,200 +1,134 @@
-function saveDataAndDisplay() {
-    // ดึงค่าจากฟอร์ม
-    var storeName = document.getElementById('storeName').value;
-    var storeDescription = document.getElementById('storeDescription').value;
-    var storePhoneNumber = document.getElementById('storePhoneNumber').value;
-    var storeEmail = document.getElementById('storeEmail').value;
-    var profileImageInput = document.getElementById('profileImage');
-
-    // สร้างตัวแปรเพื่อเก็บข้อมูล
-    var data = {
-        storeName: storeName,
-        storeDescription: storeDescription,
-        storePhoneNumber: storePhoneNumber,
-        storeEmail: storeEmail,
-        profileImageSrc: profileImageInput.files.length > 0 ? URL.createObjectURL(profileImageInput.files[0]) : null
-    };
-
-    // แสดงข้อมูลที่บันทึกในคอนเทนเนอร์
-    saveImageToLocalStorage(data.profileImageSrc);
-
-    // บันทึกข้อมูลใน localStorage
-    localStorage.setItem('storedData', JSON.stringify(data));
-
-
-    // แสดงข้อมูลที่บันทึกในคอนเทนเนอร์
-    displayData(data);
-}
-
-function saveImageToLocalStorage(imageSrc) {
-    localStorage.setItem('uploadedImageSrc', imageSrc);
-}
-
-
-
-function displayData(data) {
-    // แสดงข้อมูลที่บันทึกในคอนเทนเนอร์
-    document.getElementById('resultStoreName').innerHTML = '<strong>ชื่อร้านค้า:</strong> ' + data.storeName;
-    document.getElementById('resultStoreDescription').innerHTML = '<strong>รายละเอียดร้านค้า:</strong> ' + data.storeDescription;
-    document.getElementById('resultStorePhoneNumber').innerHTML = '<strong>เบอร์โทรศัพท์ร้านค้า:</strong> ' + data.storePhoneNumber;
-    document.getElementById('resultStoreEmail').innerHTML = '<strong>อีเมลร้านค้า:</strong> ' + data.storeEmail;
-
-    // แสดงรูปภาพในคอนเทนเนอร์ (ถ้ามี)
-    var resultProfileImageContainer = document.getElementById('resultProfileImageContainer');
-    var resultProfileImage = document.getElementById('resultProfileImage');
-    
-    if (data.profileImageSrc) {
-        resultProfileImage.src = data.profileImageSrc;
-        resultProfileImageContainer.style.display = 'block';
-    } else {
-        resultProfileImageContainer.style.display = 'none';
-    }
-}
-
-// โหลดและแสดงข้อมูลจาก localStorage เมื่อโหลดหน้าเว็บ
-window.onload = function () {
-    var storedData = JSON.parse(localStorage.getItem('storedData'));
-    var storedImageSrc = localStorage.getItem('uploadedImageSrc');
-    if (storedData) {
-        displayData(storedData);
-    }
-
-    if (storedImageSrc) {
-        // แสดงรูปภาพที่ถูกบันทึกใน Local Storage
-        document.getElementById('resultProfileImage').src = storedImageSrc;
-        document.getElementById('resultProfileImageContainer').style.display = 'block';
-    }
-}
-
-
-
-
-
-// โค้ดที่ใช้เก็บข้อมูลบอร์ดเกมใน Local Storage
 var boardsData = JSON.parse(localStorage.getItem('boardsData')) || [];
 
 // ฟังก์ชันที่ใช้เพิ่มข้อมูลบอร์ดเกม
-function saveBoard() { 
-    // ดึงข้อมูลจากฟอร์ม+
-    
+function saveBoardGame() {
+    // ดึงข้อมูลจากฟอร์ม
     var boardName = document.getElementById("boardName").value;
-    
+    var boardRules = document.getElementById("boardRules").value;
+    var playersCount = document.getElementById("playersCount").value;
+    var boardPrice = document.getElementById("boardPrice").value;
+    var boardImageInput = document.getElementById("boardImage");
+
+    // ตรวจสอบว่าผู้ใช้ได้เลือกรูปภาพหรือไม่
+    var boardImage = null;
+    if (boardImageInput.files.length > 0) {
+        boardImage = URL.createObjectURL(boardImageInput.files[0]);
+    }
+
+    // ตรวจสอบว่าข้อมูลกรอกครบหรือไม่
+    if (!boardName || !boardRules || !playersCount || !boardPrice) {
+        alert("Please fill in all required fields.");
+        return;
+    }
 
     // สร้าง Object ข้อมูลบอร์ดเกม
-    var newBoard = { name: boardName };
+    var newBoard = {
+        name: boardName,
+        rules: boardRules,
+        playersCount: playersCount,
+        price: boardPrice,
+        image: boardImage
+    };
 
     // เพิ่มข้อมูลใน Local Storage
     boardsData.push(newBoard);
     localStorage.setItem('boardsData', JSON.stringify(boardsData));
 
     // เรียกฟังก์ชันสร้างคอนเทนเนอร์
-    
-    // เรียกฟังก์ชันสร้างคอนเทนเนอร์
     createBoardContainer(newBoard);
 
     // ปิด Modal
     var modal = new bootstrap.Modal(document.getElementById("addBoardModal"));
     modal.hide();
-
-    // อัปเดตจำนวนบอร์ดเกม
-    updateBoardCount();
 }
 
-function updateBoardCount() {
-    // นับจำนวนบอร์ดเกมทั้งหมด
-    var totalBoards = boardsData.length;
-
-    // แสดงจำนวนบอร์ดเกมใหม่
-    document.getElementById('totalBoardsCount').innerText = totalBoards;
-}
-
-// ฟังก์ชันที่ใช้สร้างคอนเทนเนอร์
-// ฟังก์ชันที่ใช้สร้างคอนเทนเนอร์
+// ฟังก์ชันที่ใช้สร้างคอนเทนเนอร์บอร์ดเกม
 function createBoardContainer(board) {
-    var newBoardContainer = document.createElement("div");
-    newBoardContainer.className = "col-md-4";
-    newBoardContainer.setAttribute("data-board-name", board.name); // เพิ่ม Attribute เก็บชื่อบอร์ด
-
-    var newBoardCard = document.createElement("div");
-    newBoardCard.className = "card";
-
-    var newBoardCardBody = document.createElement("div");
-    newBoardCardBody.className = "card-body";
-
-    var newBoardTitle = document.createElement("h5");
-    newBoardTitle.className = "card-title";
-    newBoardTitle.innerText = board.name;
-
-    // ปุ่มแก้ไข
-    var editButton = document.createElement("button");
-    editButton.className = "btn btn-warning";
-    editButton.innerText = "แก้ไข";
-    editButton.addEventListener("click", function() {
-        // เรียกใช้ฟังก์ชันแก้ไขบอร์ดเกม
-        editBoard(board);
-    });
-
-    // ปุ่มลบ
-    var deleteButton = document.createElement("button");
-    deleteButton.className = "btn btn-danger";
-    deleteButton.innerText = "ลบ";
-    deleteButton.addEventListener("click", function() {
-        // เรียกใช้ฟังก์ชันลบบอร์ดเกม
-        deleteBoard(newBoardContainer, board);
-    });
-
-    // เพิ่มคอนเทนเนอร์ใหม่ลงในหน้าโปรไฟล์
-    newBoardCardBody.appendChild(newBoardTitle);
-    newBoardCardBody.appendChild(editButton);
-    newBoardCardBody.appendChild(deleteButton);
-    newBoardCard.appendChild(newBoardCardBody);
-    newBoardContainer.appendChild(newBoardCard);
-
-    // เพิ่มคอนเทนเนอร์ใหม่ลงในส่วนของบอร์ดเกม
     var boardsContainer = document.getElementById("boardsContainer");
-    boardsContainer.appendChild(newBoardContainer);
 
-     return newBoardContainer;
+    // สร้าง Element สำหรับคอนเทนเนอร์
+    var boardContainer = document.createElement("div");
+    boardContainer.classList.add("col-md-15");
+
+    // กำหนดข้อมูลบอร์ดเกมใน Attribute
+    boardContainer.setAttribute("data-board-name", board.name);
+
+    // HTML สำหรับคอนเทนเนอร์
+    boardContainer.innerHTML = `
+        <div class="card">
+            <div class="card-header">
+                ${board.name}
+            </div>
+            <div class="card-body">
+                <p class="card-text">Rules: ${board.rules}</p>
+                <p class="card-text">Players Count: ${board.playersCount}</p>
+                <p class="card-text">Price: ${board.price}</p>
+                <img src="${board.image}" alt="${board.name}" class="img-fluid">
+                <button type="button" class="btn btn-primary" onclick="editBoard('${board.name}')">Edit</button>
+                <button type="button" class="btn btn-danger" onclick="deleteBoard(this.parentElement.parentElement, '${board.name}')">Delete</button>
+            </div>
+        </div>
+    `;
+
+    // เพิ่มคอนเทนเนอร์ลงในคอนเทนเนอร์หลัก
+    boardsContainer.appendChild(boardContainer);
 }
 
 // ฟังก์ชันที่ใช้แก้ไขบอร์ดเกม
-// ฟังก์ชันที่ใช้แก้ไขบอร์ดเกม
-function editBoard(board) {
+function editBoard(boardName) {
+    // ค้นหาข้อมูลบอร์ดเกมที่ต้องการแก้ไข
+    var board = boardsData.find(b => b.name === boardName);
+
     // สร้าง Modal สำหรับแก้ไขข้อมูลบอร์ดเกม
     var modalContent = `
         <div class="modal fade" id="editBoardModal" tabindex="-1" aria-labelledby="editBoardModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="editBoardModalLabel">แก้ไขบอร์ดเกม</h5>
+                        <h5 class="modal-title" id="editBoardModalLabel">Edit Board Game</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- Form สำหรับกรอกข้อมูลใหม่ -->
+                        <!-- Form for editing board game -->
                         <form id="editBoardForm">
                             <div class="mb-3">
-                                <label for="editBoardName" class="form-label">ชื่อบอร์ดเกม</label>
+                                <label for="editBoardName" class="form-label">Board Game Name</label>
                                 <input type="text" class="form-control" id="editBoardName" value="${board.name}" required>
                             </div>
-                            <!-- เพิ่มฟิลด์ข้อมูลอื่น ๆ ตามต้องการ -->
-                            <!-- เช่น <div class="mb-3">...</div> -->
+                            <div class="mb-3">
+                                <label for="editBoardRules" class="form-label">Basic Rules</label>
+                                <textarea type="text" class="form-control" id="editBoardRules" rows="3" required>${board.rules}</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editPlayersCount" class="form-label">Number of Players</label>
+                                <input type="number" class="form-control" id="editPlayersCount" value="${board.playersCount}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editBoardPrice" class="form-label">Price</label>
+                                <input type="number" class="form-control" id="editBoardPrice" value="${board.price}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editBoardImage" class="form-label">Board Game Image</label>
+                                <input type="file" class="form-control" id="editBoardImage">
+                            </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
-                        <button type="button" class="btn btn-primary" onclick="saveEditedBoard('${board.name}')">บันทึก</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="saveEditedBoard('${board.name}')">Save</button>
                     </div>
                 </div>
             </div>
         </div>
     `;
 
-    // แทรก HTML ของ Modal ลงในหน้าเว็บ
+    // Insert the HTML of the modal into the webpage
     document.body.insertAdjacentHTML('beforeend', modalContent);
 
-    // เรียก Modal
+    // Call the Modal
     var editBoardModal = new bootstrap.Modal(document.getElementById('editBoardModal'));
     editBoardModal.show();
+    // Clear the existing edit modal if it exists
 
     var closeButton = document.querySelector("#editBoardModal .btn-close");
     if (closeButton) {
@@ -202,52 +136,80 @@ function editBoard(board) {
             editBoardModal.hide();
         });
     }
-   
- 
 }
+
 // ฟังก์ชันที่ใช้สำหรับบันทึกข้อมูลที่แก้ไข
 function saveEditedBoard(oldBoardName) {
-    // ดึงข้อมูลจากฟอร์ม
+    // Get data from the form
     var editedBoardName = document.getElementById('editBoardName').value;
+    var editedBoardRules = document.getElementById('editBoardRules').value;
+    var editedPlayersCount = document.getElementById('editPlayersCount').value;
+    var editedBoardPrice = document.getElementById('editBoardPrice').value;
+    var editedBoardImageInput = document.getElementById('editBoardImage');
 
-    // ทำตามต้องการเพื่อบันทึกข้อมูลที่แก้ไข
-    // เช่น อัพเดทข้อมูลใน Local Storage หรือทำการ Ajax Request
-
-    // ปิด Modal
-  
-
-    // ทำการอัปเดตข้อมูลในคอนเทนเนอร์
-    var boardContainer = document.getElementById('boardsContainer').querySelector(`[data-board-name="${oldBoardName}"]`);
-    if (boardContainer) {
-        var boardTitle = boardContainer.querySelector('.card-title');
-        if (boardTitle) {
-            boardTitle.innerText = editedBoardName;
-            boardContainer.setAttribute("data-board-name", editedBoardName); // อัปเดต Attribute ชื่อบอร์ด
-        }
+    // Check if the user selected a new image
+    var editedBoardImage = null;
+    if (editedBoardImageInput.files.length > 0) {
+        editedBoardImage = URL.createObjectURL(editedBoardImageInput.files[0]);
     }
 
-    // อัปเดตข้อมูลใน Local Storage
+    // Update data in the local storage
     var index = boardsData.findIndex(b => b.name === oldBoardName);
     if (index !== -1) {
         boardsData[index].name = editedBoardName;
+        boardsData[index].rules = editedBoardRules;
+        boardsData[index].playersCount = editedPlayersCount;
+        boardsData[index].price = editedBoardPrice;
+        if (editedBoardImage) {
+            boardsData[index].image = editedBoardImage;
+        }
         localStorage.setItem('boardsData', JSON.stringify(boardsData));
+    }
+
+    // Close the modal
+    var editBoardModal = new bootstrap.Modal(document.getElementById("editBoardModal"));
+    editBoardModal.hide();
+
+    // Update the data in the container
+    var boardContainer = document.getElementById('boardsContainer').querySelector(`[data-board-name="${oldBoardName}"]`);
+    if (boardContainer) {
+        var boardTitle = boardContainer.querySelector('.card-header');
+        if (boardTitle) {
+            boardTitle.innerText = editedBoardName;
+            boardContainer.setAttribute("data-board-name", editedBoardName); // Update the board name attribute
+
+            // Update other information in the container
+            var rulesElement = boardContainer.querySelector('.card-text:nth-child(2)');
+            var playersCountElement = boardContainer.querySelector('.card-text:nth-child(3)');
+            var priceElement = boardContainer.querySelector('.card-text:nth-child(4)');
+            var imageElement = boardContainer.querySelector('.img-fluid');
+
+            if (rulesElement) {
+                rulesElement.innerText = "Rules: " + editedBoardRules;
+            }
+            if (playersCountElement) {
+                playersCountElement.innerText = "Players Count: " + editedPlayersCount;
+            }
+            if (priceElement) {
+                priceElement.innerText = "Price: " + editedBoardPrice;
+            }
+            if (imageElement && editedBoardImage) {
+                imageElement.src = editedBoardImage;
+                imageElement.alt = editedBoardName;
+            }
+        }
     }
 }
 
 
-
-
-
-// ฟังก์ชันที่ใช้ลบบอร์ดเกม
-function deleteBoard(boardContainer, board) {
-    // ใส่โค้ดที่ต้องการให้เกิดขึ้นเมื่อกดปุ่มลบ
-    // เช่น แสดง Pop-up ยืนยันการลบ หรือทำการลบข้อมูล
-    var confirmDelete = confirm("คุณแน่ใจหรือไม่ที่ต้องการลบบอร์ดเกม: " + board.name + " ?");
+// Function to delete a board game
+function deleteBoard(boardContainer, boardName) {
+    // Code to execute when the delete button is clicked
+    var confirmDelete = confirm("Are you sure you want to delete the board game: " + boardName + " ?");
     if (confirmDelete) {
-        boardContainer.remove(); // ลบคอนเทนเนอร์
-        // ใส่โค้ดที่ต้องการให้เกิดขึ้นเมื่อบอร์ดถูกลบ
-        // เช่น ทำการลบข้อมูลใน Local Storage
-        var index = boardsData.findIndex(b => b.name === board.name);
+        boardContainer.remove(); // Remove the container
+        // Code to execute when the board is deleted
+        var index = boardsData.findIndex(b => b.name === boardName);
         if (index !== -1) {
             boardsData.splice(index, 1);
             localStorage.setItem('boardsData', JSON.stringify(boardsData));
@@ -256,18 +218,25 @@ function deleteBoard(boardContainer, board) {
     updateBoardCount();
 }
 
-// ฟังก์ชันที่ใช้เรียกข้อมูลบอร์ดเกมและสร้างคอนเทนเนอร์
+// Function to load board game data and create containers
 function loadBoards() {
-    // ดึงข้อมูลจาก Local Storage
+    // Retrieve data from local storage
     boardsData.forEach(function(board) {
         createBoardContainer(board);
     });
-      updateBoardCount();
+    updateBoardCount();
 }
 
-// เรียกใช้งานเมื่อหน้าโปรไฟล์โหลดเสร็จ
+// Call the function when the profile page has finished loading
 document.addEventListener("DOMContentLoaded", function() {
     loadBoards();
 });
 
+// Function to update the displayed board count
+function updateBoardCount() {
+    // Count the total number of boards
+    var totalBoards = boardsData.length;
 
+    // Display the new number of boards
+    document.getElementById('totalBoardsCount').innerText = totalBoards;
+}
