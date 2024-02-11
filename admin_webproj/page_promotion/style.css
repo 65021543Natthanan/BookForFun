@@ -15,7 +15,7 @@
 #content {
     float:left;
     position:absolute;
-    height:9%;
+    max-height: auto;
     width:60%;
     word-wrap: break-word;
     overflow-y: scroll;
