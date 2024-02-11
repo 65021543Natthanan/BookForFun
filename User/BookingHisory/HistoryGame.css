@@ -1,0 +1,186 @@
+*{
+    margin: 0%;
+  }
+  
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color:#fff;
+  }
+  
+  /* Color */
+  
+  header {
+    background-color:#FFC107;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px; /* กำหนดความสูงเท่ากัน */
+    padding: 40px 20px;
+  } 
+  .Click{
+    margin-top: -6%;
+    border: 2px;
+    width: auto;
+    height: 100px;
+    background-color: #333;
+    color: #FFC107;
+  }
+  
+  .Click .ToClick a{
+    color: #fff;
+    text-decoration: none;/*เส้นต้ายออก*/
+    font-size: 25px;
+    padding: 50px 10px 50px 25px;
+    line-height: 80px; /* ปรับระยะห่างตามความสูงของส่วน .Click */
+  }
+  
+  header img {
+    width: 150px;
+    margin: 10px;
+  }
+  
+  main {
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logo {
+    float: left;
+}
+
+.nav {
+    float: right;
+}
+
+.nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav a:hover {
+    color: #ddd;
+}
+
+.history {
+    border: 1px solid #fff;
+    padding: 20px;
+    background-color: #fff;
+    
+}
+
+.booking {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.store, .game, .quantity, .price, .actions {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.store img, .game img {
+    width: 50px;
+    height: 50px;
+}
+
+.quantity, .price {
+    padding: 0 10px;
+}
+
+.actions a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.actions a:hover {
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+  }

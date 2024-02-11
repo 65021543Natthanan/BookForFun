@@ -1,0 +1,204 @@
+
+/* Font */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color:#ddd;
+}
+
+/* Color */
+
+header {
+  background-color:#FFC107;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px; /* กำหนดความสูงเท่ากัน */
+  padding: 40px 20px;
+}
+
+  header form {
+      margin-left: auto;
+  }
+
+  header input[type="text"],header button {
+      height: 50px; /* กำหนดความสูงเท่ากัน */
+  }
+
+  button {
+      cursor: pointer;
+      width: auto; /* เปลี่ยนเป็นค่าคงที่ */
+      background-color: #333;
+      color: #fff;
+      padding: 8px 16px; /* เพิ่ม padding เพื่อให้ปุ่มมีขนาดที่เหมาะสม */
+  }
+
+
+.Click{
+  border: 2px;
+  width: auto;
+  height: 80px;
+  background-color: #333;
+  color: #FFC107;
+}
+
+.Click .ToClick a{
+  color: #fff;
+  text-decoration: none;/*เส้นต้ายออก*/
+  font-size: 25px;
+  padding: 50px 10px 50px 25px;
+  line-height: 80px; /* ปรับระยะห่างตามความสูงของส่วน .Click */
+}
+
+
+.results {
+  position: absolute;
+  top: 34%; /* ปรับตำแหน่งตามต้องการ */
+  right: 20%; /* ปรับตำแหน่งตามต้องการ */
+  width: 65%;
+}
+
+.MeetStore{
+  padding-left:5% ;
+}
+
+.results .store-name{
+  margin: 0% 0% 8% 3%;
+}
+
+.store {
+  background-color:#f8f8f8;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.store-name {
+  margin-right: 10px;
+}
+
+.store-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.store-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pagination {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.pagination a {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color:#FFFFFF;
+  color: #333;
+}
+
+.pagination a:hover {
+  background-color:#F4C11E;
+}
+
+.center{
+  position: absolute;
+  top: 37%; /* ปรับตำแหน่งตามต้องการ */
+  right: 13%; /* ปรับตำแหน่งตามต้องการ */
+  width: 65%;
+}
+.game-list {
+  padding: 20px;
+  background-color:#F4C11E;
+}
+
+.game-list h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.game-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.game-box {
+  flex: 1 0 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color:#fff;
+}
+
+.game-box img {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.game-box h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.game-box p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.game-tags {
+  margin-bottom: 10px;
+}
+
+.game-tags span {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  margin: 0 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.pagination {
+  margin-top: 125px;
+  text-align: center;
+}
+
+.pagination a {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color:#FFFFFF;
+}
+
+.pagination a:hover {
+  background-color:#F4C11E;
+}
+
+/* เพิ่มเติม */
+
+.game-list {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+

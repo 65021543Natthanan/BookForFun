@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="Profile.css">
+</head>
+
+<body>
+    <header>
+        <img src="../img/Logo.png" alt="Logo" class="images">
+    </header>
+    <main>
+        <section class="Click">
+            <div class="ToClick">
+                <a href="#">หน้าหลัก</a>
+                <a href="#">คอมมิวนิตี้</a>
+                <a href="#">บอร์ดเกม</a>
+                <a href="#">ร้านค้า</a>
+            </div>
+        </section>
+        <section class="profile-info">
+            <div class="profile">
+                <button type="button">เพิ่ม</button>
+                <button type="button">ลบ</button>
+                <button type="button">แก้ไข</button>
+            </div>
+            <div class="boxcenter">
+                <h2>ข้อมูลของฉัน</h2>
+                <div>
+                    <label for="username">ชื่อผู้ใช้</label>
+                    <input type="text" id="username" name="username" value="ป้อนชื่อ">
+                </div>
+                <div>
+                    <label for="email">อีเมลล์</label>
+                    <input type="email" id="email" name="email" value="ป้อนอีเมลล์">
+                </div>
+                <div>
+                    <label for="password">รหัสผ่าน</label>
+                    <input type="password" id="password" name="password" value="ป้อนรหัสผ่าน">
+                </div>
+                <button type="submit">บันทึก</button>
+            </div>
+
+        </section>
+        <section class="booking-history">
+            <h2>ประวัติการจอง</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ชื่อร้านค้า</th>
+                        <th>วันที่</th>
+                        <th>เวลา</th>
+                        <th>จำนวน</th>
+                        <th>สถานะ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ร้านค้า</td>
+                        <td>2024-02-10</td>
+                        <td>10:00 น.</td>
+                        <td>2 คน</td>
+                        <td>รอconfirm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2024 BOOKAFUN</p>
+    </footer>
+</body>
+
+</html>
