@@ -75,7 +75,8 @@ var boardsData = JSON.parse(localStorage.getItem('boardsData')) || [];
 
 // ฟังก์ชันที่ใช้เพิ่มข้อมูลบอร์ดเกม
 function saveBoard() { 
-    // ดึงข้อมูลจากฟอร์ม
+    // ดึงข้อมูลจากฟอร์ม+
+    
     var boardName = document.getElementById("boardName").value;
     
 

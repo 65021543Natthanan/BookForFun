@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ที่อยู่ของร้านค้า</title>
+    <title>รายละเอียดร้านค้า</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css"> <!-- สร้างไฟล์ styles.css เพื่อเพิ่มสไตล์แบบที่คุณต้องการ -->
+    <link rel="stylesheet" href="a.css"> <!-- สร้างไฟล์ styles.css เพื่อเพิ่มสไตล์แบบที่คุณต้องการ -->
     <style>
         /* เพิ่มสไตล์เพื่อทำให้ Navbar คงที่ */
         body {
@@ -111,7 +111,7 @@
 
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="profileHeading">
-                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
+                                            <a href="index.html" class="accordion-button collapsed" aria-expanded="false">
                                                 รายละเอียดร้านค้า
                                             </a>
                                         </h2>
@@ -198,7 +198,7 @@
                                     <!-- ที่อยู่ -->
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="promotionHeading">
-                                            <a href="address.html" class="accordion-button collapsed" aria-expanded="false">
+                                            <a href="#" class="accordion-button collapsed" aria-expanded="false">
                                                 ที่อยู่
                                             </a>
                                         </h2>
@@ -226,98 +226,33 @@
 
             <div class="col-md-6">
                 <div class="center-container p-4">
-                    <!-- Button to trigger modal -->
-                <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-warning ms-auto" data-bs-toggle="modal" data-bs-target="#addressModal">
-                    เพิ่มที่อยู่ใหม่
-                    </button>
-                </div>
+                    <h2 class="text-center mb-4">Update Promotions</h2>
+
+        <!-- Form for updating promotions -->
+        <form id="updatePromotionForm">
+            <div class="form-group">
+                <label for="storeName">ชื่อโปรโมชัน</label>
+                <input type="text" class="form-control" id="storeName" required>
+            </div>
+            <div class="form-group">
+                <label for="promotionDescription">เนื้อหาโปรโมชัน</label>
+                <textarea class="form-control" id="promotionDescription" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="promotionImage" class="form-label">ภาพโปรโมชัน</label>
+                <input type="file" class="form-control" id="promotionImage" accept="image/*">
+            </div>
+
+            
 
 
-                <!-- Modal -->
-                <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
+            <button type="button" class="btn btn-warning" onclick="updatePromotion()">Update Promotion</button>
+        </form>
+        <!-- Display updated promotions -->
+        <div id="updatedPromotionContainer" class="mt-4">
+            <!-- Updated promotions will be displayed here -->
+        </div>
 
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="addressModalLabel">กรอกข้อมูลที่อยู่</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <!-- Modal Body -->
-                        <div class="modal-body">
-                        <!-- Address Form Goes Here -->
-                        <form id="addressForm">
-                            <!-- Add your address form fields here -->
-                        
-
-                            <div class="mb-3">
-                                <label for="storeAddress" class="form-label">ที่อยู่:</label>
-                                <input type="tel" class="form-control" id="storeAddress" name="storeAddress" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="storeRoad" class="form-label">ถนน:</label>
-                                <input type="tel" class="form-control" id="storeRoad" name="storeRoad" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="storeAlley" class="form-label">ซอย:</label>
-                                <input type="tel" class="form-control" id="storeAlley" name="storeAlley" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="storeVillage" class="form-label">หมู่บ้าน:</label>
-                                <input type="tel" class="form-control" id="storeVillage" name="storeVillage" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="storeDistrict" class="form-label">อำเภอ/แขวง:</label>
-                                <input type="tel" class="form-control" id="storeDistrict" name="storeDistrict" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="storeCountry" class="form-label">ตำบล/เขต:</label>
-                                <input type="tel" class="form-control" id="storeCountry" name="storeCountry" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="storeProvince" class="form-label">จังหวัด:</label>
-                                <input type="tel" class="form-control" id="storeProvince" name="storeProvince" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="storePostal" class="form-label">เลขไปรษณีย์:</label>
-                                <input type="tel" class="form-control" id="storePostal" name="storePostal" required>
-                            </div>
-                            <!-- Add more address fields as needed -->
-
-                            <button type="button" class="btn btn-warning" onclick="saveDataAndDisplay()">บันทึก</button>
-                        </form>
-                        </div>
-
-                    </div>
-                    </div>
-                </div>
-                    <h1 class="text-start mb-1 fs-3">ที่อยู่ของร้านค้า</h1>
-                    <p class="fs-6">ตั้งค่าที่อยู่ของร้านเพื่อระบุตำแหน่งของร้านค้า</p>
-                    <hr class="style1">
-                    <div id="resultContainer" class="mt-4 text-center">
-                        
-                        <div id="resultProfileImageContainer">
-                            <img id="resultProfileImage" src="" alt="รูปภาพโปรไฟล์" class="rounded-circle mx-auto " style width = 40% height= 40%>
-                        </div>
-                        <p class="text-start" id="resultStoreAddress"><strong>ที่อยู่:</strong></p>
-                        <p class="text-start" id="resultStoreRoad"><strong>ถนน:</strong></p>
-                        <p class="text-start" id="resultStoreAlley"><strong>ซอย:</strong></p>
-                        <p class="text-start" id="resultStoreVillage"><strong>หมู่บ้าน:</strong></p>
-                        <p class="text-start" id="resultStoreDistrict"><strong>อำเภอ/แขวง:</strong></p>
-                        <p class="text-start" id="resultStoreCounty"><strong>ตำบล/เขต:</strong></p>
-                        <p class="text-start" id="resultStoreProvince"><strong>จังหวัด:</strong></p>
-                        <p class="text-start" id="resultStorePostal"><strong>เลขไปรษณีย์:</strong></p>
-                       
-                    </div>
                 </div>
             </div>
             
@@ -333,6 +268,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script> <!-- สร้างไฟล์ script.js เพื่อเพิ่มสคริปต์ที่จำเป็น -->
+    <script src="a.js"></script> <!-- สร้างไฟล์ script.js เพื่อเพิ่มสคริปต์ที่จำเป็น -->
 </body>
 </html>
