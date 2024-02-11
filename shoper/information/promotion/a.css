@@ -1,7 +1,7 @@
 /* เพิ่มสไตล์ตามที่ต้องการ */
 .banner-container {
     background-color: #ffc107;
-    padding: 20px;
+    padding: 2%;
     text-align: left;
 }
 
@@ -21,27 +21,27 @@ body {
 
 .left-container{
     background-color: #f8f9fa;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #ccc; /* เพิ่มเส้นขอบทั้งหมด */
-    border-radius: 10px; /* เพิ่มขอบมนขอบ */
+    padding: 20%;
+    margin: 10%;
+    border: 1% solid #ccc; /* เพิ่มเส้นขอบทั้งหมด */
+    border-radius: 10%; /* เพิ่มขอบมนขอบ */
 }
 
 
 .center-container {
     background-color: #f8f9fa;
-    border: 1px solid #d6d8db;
-    padding: 20px;
+    border: 1% solid #d6d8db;
+    padding: 20%;
 }
 
 
 #resultProfileImageContainer {
     display: none;
-    margin-top: 10px;
+    margin-top: 10%;
 }
 
 .style1 {
-    border-top: 1px solid #000;
+    border-top: 1% solid #000;
 }
 
 .card {

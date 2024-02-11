@@ -30,7 +30,6 @@ function saveBoardGame() {
         image: boardImage
     };
 
-    // เพิ่มข้อมูลใน Local Storage
     boardsData.push(newBoard);
     localStorage.setItem('boardsData', JSON.stringify(boardsData));
 
@@ -40,6 +39,9 @@ function saveBoardGame() {
     // ปิด Modal
     var modal = new bootstrap.Modal(document.getElementById("addBoardModal"));
     modal.hide();
+
+    // อัพเดตจำนวนบอร์ดเกม
+    updateBoardCount();
 }
 
 // ฟังก์ชันที่ใช้สร้างคอนเทนเนอร์บอร์ดเกม

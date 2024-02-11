@@ -1,7 +1,7 @@
 /* เพิ่มสไตล์ตามที่ต้องการ */
 .banner-container {
     background-color: #ffc107;
-    padding: 20px;
+    padding: 2%;
     text-align: left;
 }
 
@@ -22,28 +22,28 @@ body {
 
 .left-container{
     background-color: #f8f9fa;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #ccc; /* เพิ่มเส้นขอบทั้งหมด */
-    border-radius: 10px; /* เพิ่มขอบมนขอบ */
+    padding: 20%;
+    margin: 10%;
+    border: 1% solid #ccc; /* เพิ่มเส้นขอบทั้งหมด */
+    border-radius: 10%; /* เพิ่มขอบมนขอบ */
 }
 
 
 .center-container {
     background-color: #f8f9fa;
-    border: 1px solid #d6d8db;
-    padding: 200px;
-    margin: 1px;
+    border: 1% solid #d6d8db;
+    padding: 200%;
+    margin: 1%;
 }
 
 
 #resultProfileImageContainer {
     display: none;
-    margin-top: 10px;
+    margin-top: 10%;
 }
 
 .style1 {
-    border-top: 1px solid #000;
+    border-top: 1% solid #000;
 }
 
 /* ปรับแต่งสไตล์ของหน้าโปรไฟล์ร้านบอร์ดเกม */
@@ -53,9 +53,9 @@ body {
 
 .card {
     background-color: #ffffff; /* สีพื้นหลังของการ์ด */
-    border: 1px solid #DDD; /* เส้นขอบของการ์ด */
-    border-radius: 8px; /* มุมของการ์ด */
-    margin-bottom: 10px; /* ระยะห่างระหว่างการ์ด */
+    border: 1% solid #DDD; /* เส้นขอบของการ์ด */
+    border-radius: 8%; /* มุมของการ์ด */
+    margin-bottom: 10%; /* ระยะห่างระหว่างการ์ด */
 }
 
 .card-header{
