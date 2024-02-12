@@ -62,10 +62,10 @@ function createBoardContainer(board) {
                 ${board.name}
             </div>
             <div class="card-body">
-                <p class="card-text">Rules: ${board.rules}</p>
+                <img src="${board.image}" alt="${board.name}"  class="img-thumbnail mx-auto d-block" style width = 40% height= 40%>
                 <p class="card-text">Players Count: ${board.playersCount}</p>
                 <p class="card-text">Price: ${board.price}</p>
-                <img src="${board.image}" alt="${board.name}" class="img-fluid">
+                <p class="card-text">Rules: ${board.rules}</p>
                 <button type="button" class="btn btn-primary" onclick="editBoard('${board.name}')">Edit</button>
                 <button type="button" class="btn btn-danger" onclick="deleteBoard(this.parentElement.parentElement, '${board.name}')">Delete</button>
             </div>
@@ -107,7 +107,7 @@ function editBoard(boardName) {
                             </div>
                             <div class="mb-3">
                                 <label for="editBoardPrice" class="form-label">Price</label>
-                                <input type="number" class="form-control" id="editBoardPrice" value="${board.price}" required>
+                                <input type="text" class="form-control" id="editBoardPrice" value="${board.price}" required>
                             </div>
                             <div class="mb-3">
                                 <label for="editBoardImage" class="form-label">Board Game Image</label>

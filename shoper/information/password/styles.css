@@ -1,0 +1,48 @@
+/* เพิ่มสไตล์ตามที่ต้องการ */
+.banner-container {
+    background-color: #ffc107;
+    padding: 2%;
+    text-align: left;
+}
+
+.banner-content img {
+    max-width: 100%;
+}
+
+.navbar { 
+    background-color: #333;
+    text-align: center;
+}
+
+body {
+    background-color: #fffef0;
+    font-family: 'Arial', sans-serif;
+}
+
+.left-container{
+    background-color: #f8f9fa;
+    padding: 20%;
+    margin: 10%;
+    border: 1% solid #ccc; /* เพิ่มเส้นขอบทั้งหมด */
+    border-radius: 10%; /* เพิ่มขอบมนขอบ */
+}
+
+
+.center-container {
+    background-color: #f8f9fa;
+    border: 1% solid #d6d8db;
+    padding: 20%;
+}
+
+
+#resultProfileImageContainer {
+    display: none;
+    margin-top: 10%;
+}
+
+.style1 {
+    border-top: 1% solid #000;
+}
+
+
+

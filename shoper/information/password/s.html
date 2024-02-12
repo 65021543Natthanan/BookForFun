@@ -59,7 +59,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                   
+                  
                     <li class="nav-item">
                         <a class="nav-link" href="#">ร้านค้า</a>
                     </li>
@@ -156,7 +156,6 @@
                             <div id="gameBoardCollapse" class="accordion-collapse collapse" aria-labelledby="gameBoardHeading" data-bs-parent="#mainAccordion">
                                 <div class="accordion-body">
             
-            
                                     <!-- คิวการจอง -->
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="promotionHeading">
@@ -212,131 +211,24 @@
 
             <div class="col-md-6">
                 <div class="center-container p-4">
-                    <h1 class="text-start mb-1 fs-3">โปรไฟล์ร้านค้า</h1>
-                    <p class="fs-6">แก้ไขโปรไฟล์ร้านค้าและเพิ่มบอร์ดเกม</p>
+                    <h1 class="text-start mb-1 fs-3">บัญชีและรหัสผ่าน</h1>
+                    <p class="fs-6">แก้ไขบัญชีผู้ใช้</p>
                     <hr class="style1">
 
-                    <div class="container mt-5">
-                        <div class="row">
-                            
-                            <!-- คอนเทนเนอร์แรก -->
-                            <div class="col-md-2">
-                                
-                                
-                                <div class="card">
-                                    <img src="resultProfileImage" class="rounde mx-auto " alt="ภาพโปรไฟล์">
-                                    
-
-                                    <div class="card-body">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                    
-                            <!-- คอนเทนเนอร์ที่สอง -->
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-header">
-                                        รายละเอียดร้านค้า
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- เนื้อหารายละเอียดร้านค้า -->
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-header">
-                                        จำนวนบอร์ดเกม
-                                    </div>
-                                    <div class="card-body">
-                                        <p align="center"><span id="totalBoardsCount">0</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="card-header">
-                                        คะแนนรีวิวจากลูกค้า
-                                    </div>
-                                    <div class="card-body">
-                                        <p>คะแนนรีวิว: 4.5/5</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
+                    <form id="editUserForm">
+                        <div class="mb-3">
+                            <label for="editEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="editEmail" required>
                         </div>
-
-                        <!-- คอนเทนเนอร์ที่ห้า -->
-                        <div class="col mt-2">
-                            <div class="col-md-15">
-                                <div class="card">
-                                    <div class="card-header">
-                                        บอร์ดเกมที่ร้านค้ามี
-                                    </div>
-                                    <div class="card-body">
-                                       
-                                        <div align="right">
-                                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addBoardModal">
-                                            เพิ่มบอร์ดเกม
-                                        </button>
-                                        </div>
-                                        <!-- ปุ่มสำหรับเพิ่มบอร์ดเกม -->
-                                        <div class="col mt-4" id="boardsContainer">
-                            
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="mb-3">
+                            <label for="editPassword" class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="editPassword" required>
+                                <button class="btn btn-outline-secondary" type="button" onclick="togglePassword()">show</button>
                             </div>
                         </div>
-                       
-                    </div>
-                    
-                    <!-- Modal สำหรับเพิ่มบอร์ดเกม -->
-                    <div class="modal fade" id="addBoardModal" tabindex="-1" aria-labelledby="addBoardModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="addBoardModalLabel">เพิ่มบอร์ดเกมใหม่</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <!-- แบบฟอร์มสำหรับกรอกรายละเอียดบอร์ดเกม -->
-                                    <form id="boardGameForm">
-                                        <div class="mb-3">
-                                            <label for="boardName" class="form-label">ชื่อบอร์ดเกม</label>
-                                            <input type="text" class="form-control" id="boardName" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="boardRules" class="form-label">กติกาเบื้องต้น</label>
-                                            <textarea type="text" class="form-control" id="boardRules" rows="3" required></textarea>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="playersCount" class="form-label">จำนวนคน</label>
-                                            <input type="number" class="form-control" id="playersCount" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="boardPrice" class="form-label">ราคา</label>
-                                            <input type="text" class="form-control" id="boardPrice" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="boardImage" class="form-label">ภาพบอร์ดเกม</label>
-                                            <input type="file" class="form-control" id="boardImage">
-                                        </div>
-                                        
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
-                                    <button type="button" class="btn btn-primary" onclick="saveBoardGame()">บันทึก</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    
+                        <button type="button" class="btn btn-primary" onclick="saveUserData()">Save</button>
+                    </form>
                 </div>
             </div>
             
