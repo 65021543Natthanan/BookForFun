@@ -51,14 +51,3 @@ body {
 .card:hover {
     transform: scale(1.05);
 }
-
-footer {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    color: #fff;;
-}

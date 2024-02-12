@@ -67,10 +67,6 @@ window.onload = function () {
     }
 }
 
-
-
-
-
 // Sample data structure for storing promotions
 var promotionsData = JSON.parse(localStorage.getItem('promotionsData')) || [];
 
