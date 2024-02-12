@@ -1,80 +1,94 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game 1</title>
-    <link rel="stylesheet" href="DetalisGeme.css">
-</head>
+    <title>ที่อยู่ของร้านค้า</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="DetalisGeme.css"> <!-- สร้างไฟล์ styles.css เพื่อเพิ่มสไตล์แบบที่คุณต้องการ -->
 
-<body class="body">
-    <header class="Logo">
-        <img src="../img/LogoWebsite.png" alt="LogoWebsite">
-    </header>
-    <main>
-        <h1>Game 1</h1>
-        <section class="game-details">
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="3">รายละเอียด</th>
-                    </tr>
-                    <tr>
-                        <th>กฎเบื้องต้น</th>
-                        <th>ผู้เล่น</th>
-                        <th>ราคา</th>
-                    </tr>
-                </thead>
-                <tbody class="TableBody">
-                    <tr class="Data">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            <button type="submit" class="button">จอง</button>
-        </section>
-        <section class="game-image">
-            <img src="game1.jpg" alt="รูปภาพเกม 1">
-        </section>
-        <div class="box">
-            <div class="container">
-                <div class="header">
-                    <h2>รีวิวจากผู้เล่น (24)</h2>
-                </div>
-                <div class="rating">
-                    <span class="score">4.2/5</span>
-                    <span class="stars">
+<body>
 
-                    </span>
-                </div>
-                <div class="reviews">
-                    <div class="review">
-                        <span class="rating">5</span>
-                        <p>เกมสนุกมาก เล่นง่าย กราฟิกสวย</p>
-                    </div>
-                    <div class="review">
-                        <span class="rating">4</span>
-                        <p>เกมโอเค แต่มีบั๊กนิดหน่อย</p>
-                    </div>
-                    <div class="review">
-                        <span class="rating">3</span>
-                        <p>เกมเล่นยากไปหน่อย</p>
-                    </div>
-                    <div class="review">
-                        <span class="rating">2</span>
-                        <p>เกมไม่ค่อยสนุก</p>
-                    </div>
-                    <div class="review">
-                        <span class="rating">1</span>
-                        <p>เกมแย่มาก ไม่แนะนำ</p>
+    <!-- เพิ่มแบนเนอร์ด้านบน -->
+    <div class="banner-container">
+        <div class="banner-content">
+            <img src="../img/Logo.png" alt="โลโก้" style="width:20%;">
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top  sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">หน้าแรก</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ร้านค้า</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+                <div class="center-container p-2">
+                    <h2 class="text-center mb-2">บอร์ดเกม</h2>
+                    <div class="store-card">
+                        <div class="image-container">
+                            <img src="https://via.placeholder.com/200x200" alt="Your Image">
+                        </div>
+                        <div class="text-center">
+                            <h3>รูปภาพบอร์ดเกม</h3>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>กติกาเบื้องต้น</th>
+                                    <th>ผู้เล่น</th>
+                                    <th>ราคา</th>
+                                </tr>
+                                <tr>
+                                    <th>a</th>
+                                    <th>b</th>
+                                    <th>c</th>
+                                </tr>
+                                <tr>
+                                    <th>d</th>
+                                    <th>e</th>
+                                    <th>f</th>
+                                </tr>
+                                <tr>
+                                    <th>g</th>
+                                    <th>h</th>
+                                    <th>i</th>
+                                </tr>
+
+                            </table>
+                            <button class="btn">จอง</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+
+        <div class="footer">
+            <div class="container text-center text-light">
+                <p>© 2024 BookForFun. All Rights Reserved.</p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="Store detail.js"></script> <!-- สร้างไฟล์ script.js เพื่อเพิ่มสคริปต์ที่จำเป็น -->
 </body>
 
 </html>
