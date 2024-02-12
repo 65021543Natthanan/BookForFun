@@ -1,132 +1,45 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: #ddd;
-}
-
-/* Header */
-header {
-    background-color: #FFC107;
-    color: #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 65px; /* กำหนดความสูงเท่ากัน */
-    padding: 40px 20px;
-}
-
-header img {
-    width: 150px;
-}
-
-
-header nav a:hover {
-    color: #666;
-}
-
-header .profile {
-    display: flex;
-    align-items: center;
-}
-
-button {
-    cursor: pointer;
-    border: 5px;
-    border-color: #333;
-    border-radius: 2px;
-    width: 55px;
-    height: 35px;
-    background-color: #FFC107;
-    text-align: center;
-}
-
-header .profile img {
-    width: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-header .profile span {
-    color: #666;
-    cursor: pointer;
-}
-
-/* Main */
-main {
-    padding: 0px;
-}
-
-.boxcenter {
-    background-color: #f5f5f5;
+/* เพิ่มสไตล์ตามที่ต้องการ */
+.banner-container {
+    background-color: #ffc107;
     padding: 20px;
-    background-color: aqua;
-    height: 50%;
-    /* Remove boxcenter class (not needed anymore) */
+    text-align: left;
   }
-
   
-  .profile{
-    position: absolute;
-    right: 0px;
-    top: 35%;
-    margin-right: 10px;
+  .banner-content img {
+    max-width: 100%;
   }
-
-.Click {
-    border: 2px;
-    width: auto;
-    height: 80px;
+  
+  .navbar { 
     background-color: #333;
-    color: #FFC107;
-}
-
-.Click .ToClick a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 25px;
-    padding: 50px 10px 50px 25px;
-    line-height: 80px;
-}
-
-
-/* Booking History */
-.booking-history {
-    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  body {
+    background-color: #fffef0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .left-container{
+    background-color: #f8f9fa;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 10px;
+    border: 1px solid #ccc; /* เพิ่มเส้นขอบทั้งหมด */
+    border-radius: 10px; /* เพิ่มขอบมนขอบ */
   }
-
-.booking-history h2 {
-    margin-bottom: 10px;
-}
-
-.booking-history table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.booking-history table th,
-.booking-history table td {
-    border: 1px solid #ddd;
-    padding: 5px;
-}
-
-.booking-history table th {
-    text-align: center;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
+  
+  
+  .center-container {
+    background-color: #f8f9fa;
+    border: 1px solid #d6d8db;
+    padding: 20px;
+  }
+  
+  
+  #resultProfileImageContainer {
+    display: none;
+    margin-top: 10px;
+  }
+  
+  .style1 {
+    border-top: 1px solid #000;
+  }

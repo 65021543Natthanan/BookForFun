@@ -18,12 +18,14 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color:#ddd;
+  
 }
 
 .container {
   display: flex;
   justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
   align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+  margin-bottom: 20px;
 }
 .center-container {
   background-color: #f8f9fa;
@@ -122,12 +124,18 @@ main {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
+  text-align: center;
+    background-color: #000000;
+    border-top: 1px solid #d6d8db;
+    padding: 20px;
+}
+.commit {
+
+  margin: 10px 0px 0px 2px;
+}
+
+.commit:hover {
+  background-color:#ffc107; /* สีพื้นหลังเมื่อนำเม้าส์ไปชี้ที่ปุ่ม */
 }
 
 

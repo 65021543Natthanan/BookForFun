@@ -4,74 +4,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>ค้นหาร้านค้า</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Profile.css">
+    <style>
+        /* เพิ่มสไตล์เพื่อทำให้ Navbar คงที่ */
+        body {
+            padding-top: 0px;
+            /* ปรับให้เนื้อหาไม่ถูกครอบโดย Navbar */
+        }
+
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            /* ให้มีความสูงเหนือตัวหลักของ Navbar */
+        }
+    </style>
+    <style>
+        /* ตั้งค่าสไตล์ของ Footer */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: -150px;
+            /* ขนาดขอบล่างของ Footer */
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .footer {
+            background-color: #333;
+            padding: 2px 0;
+            /* ปรับขนาด Padding ของ Footer */
+            margin-top: auto;
+        }
+    </style>
+
 </head>
 
 <body>
-    <header>
-        <img src="../img/Logo.png" alt="Logo" class="images">
-    </header>
-    <main>
-        <section class="Click">
-            <div class="ToClick">
-                <a href="#">หน้าหลัก</a>
-                <a href="#">คอมมิวนิตี้</a>
-                <a href="#">บอร์ดเกม</a>
-                <a href="#">ร้านค้า</a>
-            </div>
-        </section>
-        <section class="profile-info">
-            <div class="profile">
-                <button type="button">เพิ่ม</button>
-                <button type="button">ลบ</button>
-                <button type="button">แก้ไข</button>
-            </div>
-            <div class="boxcenter">
-                <h2>ข้อมูลของฉัน</h2>
-                <div>
-                    <label for="username">ชื่อผู้ใช้</label>
-                    <input type="text" id="username" name="username" value="ป้อนชื่อ">
-                </div>
-                <div>
-                    <label for="email">อีเมลล์</label>
-                    <input type="email" id="email" name="email" value="ป้อนอีเมลล์">
-                </div>
-                <div>
-                    <label for="password">รหัสผ่าน</label>
-                    <input type="password" id="password" name="password" value="ป้อนรหัสผ่าน">
-                </div>
-                <button type="submit">บันทึก</button>
-            </div>
+    <!-- เพิ่มแบนเนอร์ด้านบน -->
+    <div class="banner-container">
+        <div class="banner-content">
+            <img src="../img/Logo.png" alt="โลโก้" style="width:20%;">
+        </div>
+    </div>
 
-        </section>
-        <section class="booking-history">
-            <h2>ประวัติการจอง</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ชื่อร้านค้า</th>
-                        <th>วันที่</th>
-                        <th>เวลา</th>
-                        <th>จำนวน</th>
-                        <th>สถานะ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>ร้านค้า</td>
-                        <td>2024-02-10</td>
-                        <td>10:00 น.</td>
-                        <td>2 คน</td>
-                        <td>รอconfirm</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-    <footer>
-        <p>Copyright &copy; 2024 BOOKAFUN</p>
-    </footer>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top  sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">หน้าแรก</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ร้านค้า</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+
+                <div class="left-container p-2">
+                    <section class="filter">
+                        <div id="resultContainer" class="mt-4 text-center">
+
+                            <div id="resultProfileImageContainer">
+                                <img id="resultProfileImage" src="" alt="รูปภาพโปรไฟล์" class="rounded-circle mx-auto "
+                                    style width=40% height=40%>
+                            </div>
+
+                            <p class="text-start" id="resultStoreName"><strong>ชื่อผู้ใช้:</strong></p>
+                            <p class="text-start" id="resultStorePhoneNumber"><strong>เบอร์โทรศัพท์:</strong></p>
+                            <p class="text-start" id="resultStoreEmail"><strong>อีเมล:</strong></p>
+                            
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="center-container p-4">
+                    <h1 class="text-start mb-1 fs-3">ข้อมูลของฉัน</h1>
+                    <p class="fs-6">ดูสถานะและแก้ไขข้อมูลส่วนตัวของคุณ</p>
+                    ข้อมูลทั่วไป
+                    <hr class="style1">
+
+                    <form id="storeForm">
+                        <div class="mb-3">
+                            <label for="storeName" class="form-label">ชื่อผู้ใช้:</label>
+                            <input type="text" class="form-control" id="storeName" name="storeName" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="storePhoneNumber" class="form-label">เบอร์โทรศัพท์:</label>
+                            <input type="tel" class="form-control" id="storePhoneNumber" name="storePhoneNumber"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="storeEmail" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="storeEmail" name="storeEmail" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="profileImage" class="form-label">อัปโหลดรูปภาพโปรไฟล์:</label>
+                            <input type="file" class="form-control" id="profileImage" name="profileImage">
+
+                        </div>
+
+                        <button type="button" class="btn btn-warning" onclick="saveDataAndDisplay()">บันทึก</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Profile.js"></script> <!-- สร้างไฟล์ script.js เพื่อเพิ่มสคริปต์ที่จำเป็น -->
 </body>
 
 </html>
