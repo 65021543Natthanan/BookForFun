@@ -14,37 +14,38 @@
             }
             
             #myInput {
-              background-image: url('/css/searchicon.png');
-              background-position: 0.1% 0.12%;
-              background-repeat: no-repeat;
-              width: 100%;
-              font-size: 0.16%;
-              padding: 12px 20px 12px 40px;
-              border: 1px solid #ddd;
-              margin-bottom: 12px;
-            }
-            
-            #myUL {
-              list-style-type: none;
-              padding: 0;
-              margin: 0;
-            }
-            
-            #myUL li a {
-              border: 1px solid #ddd;
-              margin-top: -1px; /* Prevent double borders */
-              background-color: #f6f6f6;
-              padding: 10px;
-              text-decoration: none;
-              font-size: 18px;
-              color: black;
-              display: block;
-            }
-            
-            #myUL li a:hover:not(.header) {
-              background-color: #eee;
+            background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+            background-position: 10px 12px; /* Position the search icon */
+            background-repeat: no-repeat; /* Do not repeat the icon image */
+            width: 100%; /* Full-width */
+            font-size: 16px; /* Increase font-size */
+            padding: 12px 20px 12px 40px; /* Add some padding */
+            border: 1px solid #ddd; /* Add a grey border */
+            margin-bottom: 12px; /* Add some space below the input */
             }
 
+            #myUL {
+            /* Remove default list styling */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            }
+
+            #myUL li a {
+            border: 1px solid #ddd; /* Add a border to all links */
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6; /* Grey background color */
+            padding: 12px; /* Add some padding */
+            text-decoration: none; /* Remove default text underline */
+            font-size: 18px; /* Increase the font-size */
+            color: black; /* Add a black text color */
+            display: block; /* Make it into a block element to fill the whole list */
+            }
+
+            #myUL li a:hover:not(.header) {
+            background-color: #eee; /* Add a hover effect to all links, except for headers */
+            }
+            
             /* เพิ่มสไตล์ตามที่ต้องการ */
 .banner-container {
     background-color: #ffc107;
@@ -92,42 +93,55 @@ body {
 }
 
 .card {
-    transition: transform 0.3s;
-}
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        align-items: center;
+        width: 70%;
+        margin: 30px;
+        padding: 20px;
+        }
 
 .card:hover {
-    transform: scale(1.05);
-}
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
 
-/* #editButton {
-    /* เพิ่มสไตล์ของปุ่มที่นี่ 
-} */
+.container {
+        padding: 2px 16px;
+        }
         </style>
 <html>
     <body>
         
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">หน้าแรก</a>
-                <div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">คอมมิวนิตี</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">บอร์ดเกม</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">ร้านค้า</a>
-                            </li>
-                        </ul>
-                </div>
+         <!-- เพิ่มแบนเนอร์ด้านบน -->
+    <div class="banner-container">
+        <div class="banner-content">
+            <img src="../image/logo-10.png" alt="โลโก้" style="width:20%;">
+        </div>
+    </div>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">หน้าแรก</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">คอมมิวนิตี</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">บอร์ดเกม</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ร้านค้า</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
         
         <script>
         function myFunction() {
@@ -147,28 +161,16 @@ body {
             }
         }
 
-        // // รับอ้างอิงของปุ่ม
-        // var editButton = document.getElementById("editButton");
-
-        // // เพิ่มฟังก์ชันที่จะทำงานเมื่อปุ่มถูกคลิก
-        // editButton.addEventListener("click", function() {
-        //     // เพิ่มโค้ดที่คุณต้องการให้ปุ่มทำงานที่นี่
-        //     // ตัวอย่างเช่น:
-        //     console.log("ปุ่ม 'แก้ไข' ถูกคลิก");
-        // });
         </script>
         
     <div class="wrapper">
     <header class="header">
-        <div class="row head">
-            <div class="col-md-4">
-                <img src="" alt>
-            </div>
-            <div class="col-md-8">
+        <!-- <div class="row head">
+             <div class="col-md-8">
                 <h1
                     style="margin: 50px; font-weight: bold;">AdminName</h1>
             </div>
-        </div>
+        </div> -->
     </header>
     
     <div class="side side-menu">
@@ -183,8 +185,37 @@ body {
             <li><a href="../page_promotion/promotion.html">Promotion</a></li>
         </ul>
     </div>
+
     <div class="main">
-        <h3>All Promotion</h3>
+        <div>
+            <h1>All Promotion</h1> <br>
+            <div class="button mb-4">
+                <button type="button" class="btn btn-warning"><i class="fa fa-plus"></i><a href="../post.html" te > Create</a> </button>
+            </div>
+            <div align="left">
+                <div class="card">
+                    <img src="../image/186.jpg" alt="Avatar" style="max-width: 100%">
+                    <div class="container">
+                      <h4><b>รายละเอียดโปรโมชั่น: sdkmsklmf;ld,sa;d.a';dmesfiurygygdnfdn</b></h4>
+                      <p>2/02/2024 - 29/02/2024</p>
+                    </div>
+                </div>
+            </div>
+            <div align="left">
+                <div class="card">
+                    <img src="../image/186.jpg" alt="Avatar" style="max-width: 100%">
+                    <div class="container">
+                      <h4><b>รายละเอียดโปรโมชั่น: กสหสหนดาหสดหาแดนฟากสฟวมกสวฟหกฟสรกนำากวสหสมปยนกรนฟากฟสมปสฟว</b></h4>
+                      <p>2/02/2024 - 15/02/2024</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="main">
+        <h3>Search</h3>
         <div class="search">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
         
@@ -210,45 +241,6 @@ body {
               <li><a href="#">Welcome to the Dungeon</a></li>
               <li><a href="#">ยินดีต้อนรับสู่ดันเจี้ยน</a></li>
             </ul>   
-        </div>
-
-        <div class="button mb-4">
-            <button type="button" class="btn btn-warning"><i class="fa fa-plus"></i><a href="../post.html" te > Create</a> </button>
-        </div>
-
-        <div class="promotion mb-4">
-            <div class="row mb-3 pro-header">
-                <div class="col-md-4">
-                    <h5>Promotion 1</h5>
-                </div>
-                <div class="col-md-4">
-                    <p class="status">Status:</p>
-                </div>
-                <!-- <div class="col-md-4 pro-side-menu">
-                    <div class="row text-end">
-                        <div class="col">
-                            <div class="editButton">
-                                <button id="editButton">แก้ไข</button>
-                            </div> 
-                            <button class="btn btn-primary edit"><i class="fa fa-pencil"></i> Edit</button>
-                        </div>
-                        <div class="col">
-                            <button class="btn btn-danger delete"><i class="fa fa-trash"></i> Delete</button>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-            <div class="detail">
-                <div class="col">
-                    <p>Detail:</p>
-                    <div id="content">
-                        <p id="detail">ehfuiglkerhwjdlegิดทกทาสกทสอทหสวมดสวแหมสวกมหhgbshghriuduifgrsgi;gzhgfffffffffffffffkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkfffffffffffffffffffffffffffffffffffuiekaghorajsgfbcjkld/fay;owherigph/gsDVhbgaer;hguiv.ha.gorauisgfvbaeriglyregzduig;tjrhdogufilh.rdjhilotkb.ggaaruoshgruijslgfiuelhuiflgeuilfegieriojgflviergh;owueaihfjhproiaslgfheroigfeuisf;oghe</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-end pro-side-menu2">
-                <img src="../image/ellipse-20.png" class="promotion-image" alt="">
-            </div>
         </div>
 
     <footer class="footer">

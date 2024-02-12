@@ -21,32 +21,19 @@
     overflow-y: scroll;
 }
 
-p.detail {
+/* p.detail {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
+    width: auto;
+    height: auto;
     hyphens: auto;
-}
-
-/* เพิ่มสไตล์ตามที่ต้องการ */
-.banner-container {
-    background-color: #ffc107;
-    padding: 0.2%;
-    text-align: left;
-}
-
-.banner-content img {
-    max-width: 100%;
-}
-
-.navbar { 
-    background-color: #333;
-    text-align: center;
-}
+} */
 
 body {
     background-color: #fffef0;
     font-family: 'Arial', sans-serif;
+    max-height: auto;
 }
 
 .left-container{

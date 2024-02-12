@@ -27,7 +27,6 @@
             left: 0;
             width: 100%;
             height: 70%;
-            background: url('../image/logoAdmin.png') center/cover;
             filter: blur(2px);
             z-index: -1;
         }
@@ -59,6 +58,7 @@
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
         text-align: center;
+        max-width: auto;
         width: 40%;
         padding: 50px;
         margin: 20px;
@@ -80,25 +80,36 @@
 </head>
 <body>
 
-    <header>
-    <div>
-        <img src="../image/logo.png" style="width: 19%;" align="left">
-        <div align="right">
-            <a href="#" class="button">สมัครสมาชิก</a>
-            <a href="#" class="button">เข้าสู่ระบบ</a>
+     <!-- เพิ่มแบนเนอร์ด้านบน -->
+     <div class="banner-container">
+        <div class="banner-content">
+            <img src="../image/logo-10.png" alt="โลโก้" style="width:20%;">
         </div>
     </div>
-    </header>
-    
-    <nav>
-        <a href="#">หน้าแรก</a>
-        <a href="boardgame\search.html"  target="_blank">บอร์ดเกม</a>
-        <a href="#">ร้านค้า</a>
-    </nav>
 
-    <div class="container">
-        <h1>--For ADMIN--</h1>
-    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">หน้าแรก</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">คอมมิวนิตี</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">บอร์ดเกม</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ร้านค้า</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
    <aside>
     <div>
