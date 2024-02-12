@@ -1,3 +1,20 @@
+
+.banner-container {
+    background-color: #ffc107;
+    padding: 20px;
+    text-align: left;
+}
+
+.banner-content img {
+    max-width: 100%;
+}
+
+.navbar { 
+    background-color: #333;
+    text-align: center;
+}
+    </style>
+    
 body {
     background-color: #ffffff;
     color: #333;
