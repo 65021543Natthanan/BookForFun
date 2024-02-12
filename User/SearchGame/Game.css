@@ -221,17 +221,3 @@ body {
 }
 
 
-.card {
-  border: 1px solid #ddd;
-  margin: 10px;
-  padding: 10px;
-  width: 200px;
-  display: inline-block;
-  text-align: center;
-}
-
-.card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
