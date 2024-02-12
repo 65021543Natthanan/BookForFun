@@ -104,3 +104,42 @@ body {
     text-align: center; /* จัดข้อความกลาง */
     line-height: 200px; /* ความสูงของบรรทัดเท่ากับความสูงของกล่อง */
 }
+
+.store-card {
+    text-align: center;
+}
+
+.image-container {
+    width: 200px; /* กำหนดความกว้างของภาพ */
+    height: 200px; /* กำหนดความสูงของภาพ */
+    overflow: hidden; /* ป้องกันภาพเกินขอบเขตของคอนเทนเนอร์ */
+    margin: 0 auto; /* จัดภาพไปตรงกลาง */
+}
+
+.image-container img {
+    width: 100%; /* ให้ภาพขนาดเต็มตามความกว้างของคอนเทนเนอร์ */
+    height: auto; /* ความสูงจะปรับตามอัตราส่วนของภาพโดยอัตโนมัติ */
+}
+
+/* ตั้งค่าสไตล์ของแถวหลัก */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* สไตล์ของแต่ละคอลัมน์ */
+.col-md-4 {
+    width: 32%; /* ให้แต่ละคอลัมน์มีความกว้าง 32% */
+    margin-bottom: 20px;
+}
+
+/* สไตล์ของส่วน footer */
+.footer {
+    background-color: #333;
+    padding: 10px 0; /* ปรับ Padding ของ Footer */
+    color: #fff;
+    text-align: center;
+    clear: both; /* เพื่อแนะนำให้ Footer แสดงอยู่ด้านล่างของหน้าเว็บ */
+}
+
