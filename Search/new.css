@@ -1,0 +1,126 @@
+/* Font */
+
+.body {
+  font-family: 'Poppins', sans-serif;
+  background-color:#fffef0;
+  padding-top: 0px;
+}
+
+/* Color */
+
+.banner-container {
+  background-color: #ffc107;
+  padding: 20px;
+  text-align: left;
+}
+
+.banner-content img {
+  max-width: 100%;
+}
+.banner-content form {
+  text-align: right;
+}
+
+.navbar { 
+  background-color: #333;
+  text-align: center;
+}
+.left-container{
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc; /* เพิ่มเส้นขอบทั้งหมด */
+  border-radius: 10px; /* เพิ่มขอบมนขอบ */
+}
+.center-container {
+  background-color: #f8f9fa;
+  border: 1px solid #d6d8db;
+  padding: 20px;
+}
+
+.Click{
+  border: 2px;
+  width: auto;
+  height: 80px;
+  background-color: #333;
+  color: #FFC107;
+}
+
+.Click .ToClick a{
+  color: #fff;
+  text-decoration: none;/*เส้นต้ายออก*/
+  font-size: 25px;
+  padding: 50px 10px 50px 25px;
+  line-height: 80px; /* ปรับระยะห่างตามความสูงของส่วน .Click */
+}
+
+
+.results {
+  position: absolute;
+  top: 34%; /* ปรับตำแหน่งตามต้องการ */
+  right: 20%; /* ปรับตำแหน่งตามต้องการ */
+  width: 65%;
+}
+
+.MeetStore{
+  padding-left:5% ;
+}
+
+.results .store-name{
+  margin: 0% 0% 8% 3%;
+}
+
+.store {
+  background-color:#f8f8f8;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.store-name {
+  margin-right: 10px;
+}
+
+.store-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.store-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pagination {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.pagination a:hover {
+  background-color:#F4C11E;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* เพิ่มระยะห่างด้านบนเพื่อให้ปุ่ม pagination ไม่ติดกับรายการผลลัพธ์ */
+}
+
+.pagination a {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  color: #333;
+}
+.style1 {
+  border-top: 1px solid #000;
+}

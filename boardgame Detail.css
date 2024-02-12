@@ -1,0 +1,146 @@
+.body {
+    font-family: 'Poppins', sans-serif;
+    background-color:#ddd;
+  }
+  
+  .banner-container {
+    background-color: #ffc107;
+    padding: 20px;
+    text-align:left;
+  }
+  
+  .banner-content img {
+    max-width: 100%;
+    text-align: center;
+  }
+  .banner-content form {
+    text-align: right;
+  }
+
+  .navbar { 
+    background-color: #333;
+    text-align: center;
+}
+  
+  .Click{
+    margin-top: -6%;
+    border: 2px;
+    width: auto;
+    height: 100px;
+    background-color: #333;
+    color: #FFC107;
+  }
+  
+  .Click .ToClick a{
+    color: #fff;
+    text-decoration: none;/*เส้นต้ายออก*/
+    font-size: 25px;
+    padding: 50px 10px 50px 25px;
+    line-height: 80px; /* ปรับระยะห่างตามความสูงของส่วน .Click */
+  }
+
+  .center-container {
+    background-color: #f8f9fa;
+    border: 1px solid #d6d8db;
+    display: flex;
+   
+    flex-direction: column; /* เพื่อให้เนื้อหาอยู่ตรงกลางแนวตั้ง */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+}
+  
+  main {
+    margin-top: 80px;
+  }
+  
+  .booking-details {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .booking-details h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .booking-info {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  
+  .booking-info .left {
+    width: 50%;
+    text-align: left;
+  }
+  
+  .booking-info .right {
+    width: 50%;
+    text-align: right;
+  }
+  
+  .booking-price {
+    margin-bottom: 20px;
+  }
+  
+  .booking-price p {
+    margin-bottom: 10px;
+  }
+  
+  .btn-confirm {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .btn-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    display: block;
+    margin: 0 auto;
+}
