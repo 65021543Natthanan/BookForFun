@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดร้านค้า</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- สร้างไฟล์ styles.css เพื่อเพิ่มสไตล์แบบที่คุณต้องการ -->
+    <style>
+        /* เพิ่มสไตล์เพื่อทำให้ Navbar คงที่ */
+        body {
+            padding-top: 0%; /* ปรับให้เนื้อหาไม่ถูกครอบโดย Navbar */
+        }
+
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1020; /* ให้มีความสูงเหนือตัวหลักของ Navbar */
+        }
+    
+    </style>
+    <style>
+        /* ตั้งค่าสไตล์ของ Footer */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: -150%; /* ขนาดขอบล่างของ Footer */
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .footer {
+            background-color: #333;
+            padding: 0% 0; /* ปรับขนาด Padding ของ Footer */
+            margin-top: auto;
+        }
+    </style>
+     
+</head>
+<body>
+
+    <!-- เพิ่มแบนเนอร์ด้านบน -->
+    <div class="banner-container">
+        <div class="banner-content">
+            <img src="logooooo.png" alt="โลโก้" style="width:20%;">
+        </div>
+    </div>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">หน้าแรก</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ร้านค้า</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+<div class="row">
+    <div class="col-md-3">
+
+
+        <div class="left-container p-2">
+            <div id="resultContainer" class="mt-4 text-center">
+                
+                <div id="resultProfileImageContainer">
+                    <img id="resultProfileImage" src="" alt="รูปภาพโปรไฟล์" class="rounded-circle mx-auto " style width = 40% height= 40%>
+                </div>
+                
+                <p class="text-start" id="resultStoreName"><strong>ชื่อร้านค้า:</strong></p>
+                <p class="text-start" id="resultStorePhoneNumber"><strong>เบอร์โทรศัพท์ร้านค้า:</strong></p>
+                <p class="text-start" id="resultStoreEmail"><strong>อีเมลร้านค้า:</strong></p>
+                <p class="text-start" id="resultStoreDescription"><strong>รายละเอียดร้านค้า:</strong></p>
+            </div>
+                
+
+        </div>
+
+        <div class="container mt-5">
+            <div class="accordion" id="mainAccordion">
+    
+                <!-- ร้านค้า -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="storeHeading">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#storeCollapse" aria-expanded="true" aria-controls="storeCollapse">
+                            ร้านค้า
+                        </button>
+                    </h2>
+                    <div id="storeCollapse" class="accordion-collapse collapse show" aria-labelledby="storeHeading" data-bs-parent="#mainAccordion">
+                        <div class="accordion-body">
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="profileHeading">
+                                    <a href="../main/index.html" class="accordion-button collapsed" aria-expanded="false">
+                                        รายละเอียดร้านค้า
+                                    </a>
+                                </h2>
+                            </div>
+    
+                            <!-- โปรไฟล์ร้านค้า -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="profileHeading">
+                                    <a href="../set.profile/index.html" class="accordion-button collapsed" aria-expanded="false">
+                                        โปรไฟล์ร้านค้า
+                                    </a>
+                                </h2>
+                            </div>
+    
+    
+                            <!-- โปรโมชัน -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="promotionHeading">
+                                    <a href="../promotion/a.html" class="accordion-button collapsed" aria-expanded="false">
+                                        โปรโมชัน
+                                    </a>
+                                </h2>
+                               
+                            </div>
+    
+                            <!-- ยืนยันการจอง -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="promotionHeading">
+                                    <a href="../set.confirmbook/index.html" class="accordion-button collapsed" aria-expanded="false">
+                                        ยืนยันการจอง
+                                    </a>
+                                </h2>
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- บอร์ดเกม -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="gameBoardHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gameBoardCollapse" aria-expanded="false" aria-controls="gameBoardCollapse">
+                            บอร์ดเกม
+                        </button>
+                    </h2>
+                    <div id="gameBoardCollapse" class="accordion-collapse collapse" aria-labelledby="gameBoardHeading" data-bs-parent="#mainAccordion">
+                        <div class="accordion-body">
+    
+                      
+                           
+    
+                            <!-- คิวการจอง -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="promotionHeading">
+                                    <a href="../book/d.html" class="accordion-button collapsed" aria-expanded="false">
+                                        คิวการจอง
+                                    </a>
+                                </h2>
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- ตั้งค่า -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="settingsHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settingsCollapse" aria-expanded="false" aria-controls="settingsCollapse">
+                            ตั้งค่า
+                        </button>
+                    </h2>
+                    <div id="settingsCollapse" class="accordion-collapse collapse" aria-labelledby="settingsHeading" data-bs-parent="#mainAccordion">
+                        <div class="accordion-body">
+    
+                            <!-- ที่อยู่ -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="promotionHeading">
+                                    <a href="../set.address/address.html" class="accordion-button collapsed" aria-expanded="false">
+                                        ที่อยู่
+                                    </a>
+                                </h2>
+                                
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="promotionHeading">
+                                    <a href="../password/s.html" class="accordion-button collapsed" aria-expanded="false">
+                                        บัญชีและรหัสผ่าน
+                                    </a>
+                                </h2>
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-8">
+    <div class="center-container p-4">
+    <h1 class="text-start mb-1 fs-3">คิวการจอง</h1>
+    <p class="fs-6">คิวของลูกค้าที่จองเข้ามาเล่นเกมที่ร้านบอร์ดเกม</p>
+   <hr class="style1">
+   <table id="booking-history-table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Table</th>
+            <th>Number</th>
+            <th>Action</th> <!-- บรรทัดนี้เพิ่มไป -->
+        </tr>
+    </thead>
+    <tbody id="booking-history-body">
+        <!-- แถวข้อมูลจะถูกแสดงที่นี่ -->
+    </tbody>
+</table>
+<script>
+    // Sample booking history data (you would fetch this from a database or API)
+    const bookingHistoryData = [
+        { Date: '2024-02-11', Time: '10.00', Name: 'เฟิสซี่', Phonenumber: '080-xxxxxxx', Table: '1', Number: '5'},
+        { Date: '2024-02-11', Time: '10.30', Name: 'นัทตี้', Phonenumber: '080-xxxxxxx', Table: '2', Number: '10'},
+        // Add more booking history data as needed
+    ];
+
+    // Function to populate the booking history table
+    function populateBookingHistoryTable() {
+        const tableBody = document.getElementById('booking-history-body');
+
+        bookingHistoryData.forEach(booking => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${booking.Date}</td>
+                <td>${booking.Time}</td>
+                <td>${booking.Name}</td>
+                <td>${booking.Phonenumber}</td>
+                <td>${booking.Table}</td>
+                <td>${booking.Number}</td>
+                
+                <button class="delete-button" onclick="deleteRow(1)">Delete</button>
+            `;
+            tableBody.appendChild(row);
+            
+        });
+    }
+    
+    document.querySelectorAll('.delete-button')
+    // Call the function to populate the table when the page loads
+    window.addEventListener('DOMContentLoaded', populateBookingHistoryTable);
+    
+    function deleteRow(id) {
+if (confirm("Are you sure you want to delete this data?")) {
+    // Get the table element
+    var table = document.getElementById("data-table");
+    
+    // Find the row with the specified ID and remove it
+    for (var i = 0; i < table.rows.length; i++) {
+        if (table.rows[i].cells[0].innerHTML == id) {
+            table.deleteRow(i);
+            break;
+        }
+    }
+
+
+
+
+    // Reload or update page here
+    location.reload(); // This will reload the page after deletion
+}
+}
+
+
+
+        
+    </script>
+    <div class="footer">
+        <div class="container text-center text-light">
+            <p>© 2024 BookForFun. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"> </script> <!-- สร้างไฟล์ script.js เพื่อเพิ่มสคริปต์ที่จำเป็น -->
+</body>
+</html>
