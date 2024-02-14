@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดการจองเกม</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Reserve.css">
+</head>
+
+<body>
+    <!-- เพิ่มแบนเนอร์ด้านบน -->
+    <div class="banner-container">
+        <div class="banner-content">
+            <a href="../After login/index.html">
+                <img src="../img/Logo.png" alt="โลโก้" style="width:20%;">
+            </a>
+
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top  sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../After login/index.html">หน้าแรก</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../SearchGame/SearchGame.html" target="_blank">บอร์ดเกม</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../SearchStore/index.html" target="_blank">ร้านค้า</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-15">
+                <div class="center-container p-4">
+                    <section class="game-info">
+                        <h2>จองคิวโต๊ะ</h2>
+                        <div class="game-card">
+                            <img src="game-image.jpg" alt="ร้าน">
+                            <h3>ร้าน [ชื่อร้าน]</h3>
+                            <p>ที่อยู่ WIFI ฟรี ห้ามสูบบุหรี่ เปิดทำการ 08:00 - 16:00</p>
+                        </div>
+                        <div class="booking-form">
+                            <h3>ข้อมูลผู้จอง</h3>
+                            <form action="#">
+                                <input type="text" placeholder="ชื่อ">
+                                <input type="text" placeholder="นามสกุล">
+                                <input type="tel" placeholder="เบอร์โทรศัพท์">
+                                <input type="email" placeholder="Email">
+                                <input type="number" placeholder="จำนวนคน">
+                                <input type="date" id="date" name="date">
+                                <input type="time" id="time" name="time">
+                                <a href="../CheckBooking/ChecKTable.html" class="commit">
+                                    <button type="button">ยืนยัน</button>
+                                </a>
+
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 BOOKFAFUN</p>
+    </footer>
+
+</body>
+
+</html>

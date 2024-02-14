@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ค้นหาร้านค้า</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Review comment.css">
+    <style>
+        /* เพิ่มสไตล์เพื่อทำให้ Navbar คงที่ */
+        body {
+            padding-top: 0px;
+            /* ปรับให้เนื้อหาไม่ถูกครอบโดย Navbar */
+        }
+
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            /* ให้มีความสูงเหนือตัวหลักของ Navbar */
+        }
+    </style>
+    <style>
+        /* ตั้งค่าสไตล์ของ Footer */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: -150px;
+            /* ขนาดขอบล่างของ Footer */
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .footer {
+            background-color: #333;
+            padding: 2px 0;
+            /* ปรับขนาด Padding ของ Footer */
+            margin-top: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- เพิ่มแบนเนอร์ด้านบน -->
+    <div class="banner-container">
+        <div class="banner-content">
+            <a href="../After login/index.html"><img src="../img/Logo.png" style="width:20%" align="left"> </a>
+        </div>
+    </div>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top  sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../After login/index.html">หน้าแรก</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../SearchGame/SearchGame.html" target="_blank">บอร์ดเกม</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../SearchStore/index.html" target="_blank">ร้านค้า</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+
+                <div class="left-container p-2">
+                    <section class="filter">
+                        <div id="resultContainer" class="mt-4 text-center">
+
+                            <div id="resultProfileImageContainer">
+                                <img id="resultProfileImage" src="" alt="รูปภาพโปรไฟล์" class="rounded-circle mx-auto "
+                                    style width=40% height=40%>
+                            </div>
+
+                            <p class="text-start" id="resultStoreName"><strong>ชื่อร้านค้า:</strong></p>
+                            <p class="text-start" id="resultStorePhoneNumber"><strong>เบอร์โทรศัพท์ร้านค้า:</strong></p>
+                            <p class="text-start" id="resultStoreEmail"><strong>อีเมลร้านค้า:</strong></p>
+                            <p class="text-start" id="resultStoreDescription"><strong>รายละเอียดร้านค้า:</strong></p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="center-container p-4">
+                    <h1 class="text-start mb-1 fs-3">รีวิวลูกค้า</h1>
+                    <p class="fs-6">ดูสถานะและแก้ไขรายละเอียดในร้านของคุณ</p>
+                    <hr class="style1">
+
+                    <form id="Comment">
+                        <div class="mb-3">
+                            <label for="Comment" class="form-label">Comment:</label>
+                            <input type="text" class="form-control" id="Comment" name="Comment" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="profileImage" class="form-label">อัปโหลดรูปภาพโปรไฟล์:</label>
+                            <input type="file" class="form-control" id="profileImage" name="profileImage">
+
+                        </div>
+
+                        <button type="button" class="btn btn-warning" onclick="saveDataAndDisplay()">บันทึก</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Review comment.js"></script> <!-- สร้างไฟล์ script.js เพื่อเพิ่มสคริปต์ที่จำเป็น -->
+</body>
+
+</html>

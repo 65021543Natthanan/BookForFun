@@ -1,0 +1,145 @@
+/* เพิ่มสไตล์ตามที่ต้องการ */
+.banner-container {
+    background-color: #ffc107;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .banner-content img {
+    max-width: 100%;
+  }
+  .banner-content form {
+    text-align: right;
+  }
+
+.navbar { 
+    background-color: #333;
+    text-align : center;
+}
+body {
+    background-color: #fffef0;
+    font-family: 'Arial', sans-serif;
+}
+
+.left-container{
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc; /* เพิ่มเส้นขอบทั้งหมด */
+    border-radius: 10px; /* เพิ่มขอบมนขอบ */
+}
+
+
+.center-container {
+    background-color: #f8f9fa;
+    border: 1px solid #d6d8db;
+    padding: 20px;
+}
+
+
+#resultProfileImageContainer {
+    display: none;
+    margin-top: 10px;
+}
+
+.style1 {
+    border-top: 1px solid #000;
+}/* เพิ่มสไตล์ตามที่ต้องการ */
+.banner-container {
+    background-color: #ffc107;
+    padding: 20px;
+    text-align: left;
+}
+
+.banner-content img {
+    max-width: 100%;
+}
+
+.navbar { 
+    background-color: #333;
+    text-align: center;
+}
+
+body {
+    background-color: #fffef0;
+    font-family: 'Arial', sans-serif;
+}
+
+.left-container{
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc; /* เพิ่มเส้นขอบทั้งหมด */
+    border-radius: 10px; /* เพิ่มขอบมนขอบ */
+}
+
+
+.center-container {
+    background-color: #f8f9fa;
+    border: 1px solid #d6d8db;
+    padding: 20px;
+}
+
+
+#resultProfileImageContainer {
+    display: none;
+    margin-top: 10px;
+}
+
+.style1 {
+    border-top: 1px solid #000;
+}
+
+.footer {
+    background-color: #333;
+    padding: 2px 0; /* ปรับขนาด Padding ของ Footer */
+    margin-top: auto;
+}
+
+.text-box {
+    width: 200px; /* ขนาดกล่องข้อความ */
+    height: 200px; /* ขนาดกล่องข้อความ */
+    background-color: #f0f0f0; /* สีพื้นหลัง */
+    border: 1px solid #ccc; /* เส้นขอบ */
+    text-align: center; /* จัดข้อความกลาง */
+    line-height: 200px; /* ความสูงของบรรทัดเท่ากับความสูงของกล่อง */
+}
+
+.store-card {
+    text-align: center;
+}
+
+.image-container {
+    width: 200px; /* กำหนดความกว้างของภาพ */
+    height: 200px; /* กำหนดความสูงของภาพ */
+    overflow: hidden; /* ป้องกันภาพเกินขอบเขตของคอนเทนเนอร์ */
+    margin: 0 auto; /* จัดภาพไปตรงกลาง */
+}
+
+.image-container img {
+    width: 100%; /* ให้ภาพขนาดเต็มตามความกว้างของคอนเทนเนอร์ */
+    height: auto; /* ความสูงจะปรับตามอัตราส่วนของภาพโดยอัตโนมัติ */
+}
+
+/* ตั้งค่าสไตล์ของแถวหลัก */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* สไตล์ของแต่ละคอลัมน์ */
+.col-md-4 {
+    width: 32%; /* ให้แต่ละคอลัมน์มีความกว้าง 32% */
+    margin-bottom: 20px;
+}
+
+/* สไตล์ของส่วน footer */
+.footer {
+    background-color: #333;
+    padding: 10px 0; /* ปรับ Padding ของ Footer */
+    color: #fff;
+    text-align: center;
+    clear: both; /* เพื่อแนะนำให้ Footer แสดงอยู่ด้านล่างของหน้าเว็บ */
+}
+
